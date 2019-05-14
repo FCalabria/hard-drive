@@ -1,10 +1,11 @@
-baseURL = "http://example.org/"
+baseURL = "https://fcalabria.github.io/hard-drive/"
 languageCode = "en-us"
 title = "Hard drive"
 theme = "hugo-theme-learn"
+publishDir = "docs"
 
 [params]
-  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+editURL = "https://github.com/fcalabria/hard-drive"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

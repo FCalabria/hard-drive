@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Hard drive"
+theme = "hugo-theme-learn"
+
+[params]
+  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]

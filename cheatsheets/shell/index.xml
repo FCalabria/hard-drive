@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Hard drive</title>
+    <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/</link>
+    <description>Recent content in Shell on Hard drive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 May 2019 00:18:40 +0200</lastBuildDate>
+    
+	<atom:link href="https://fcalabria.github.io/hard-drive/cheatsheets/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Commands</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</link>
+      <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</guid>
+      <description>cat &amp;lt;filename&amp;gt; logs a file head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file
+ -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
+    </item>
+    
+    <item>
+      <title>Writing scripts</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.writing/</link>
+      <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.writing/</guid>
+      <description>set -e The script will exit early if any line fails
+set -o pipefail The script will mark lines as failed if any piped command on it fails
+Variables Variables are declared just like this varname=value but to be referenced need to have a $ before $varname
+Double quotes enable variable interpolation, while single quotes don&amp;rsquo;t. Use with care.
+If you don&amp;rsquo;t use quotes at all and your variable has whitespaces, it will be interpreted as different arguments.</description>
+    </item>
+    
+    <item>
+      <title>Running scripts</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.running/</link>
+      <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.running/</guid>
+      <description>#!/bin/sh at the begining allows the script to be run writing just myscript.sh instead of sh myscript.sh on the command line.
+For this to work you may need to set the file as executable (chmod +x &amp;lt;filename&amp;gt;.sh)
+You can pass arguments to a script the same way you pass them to a function
+# Command line ./my-script.sh arg1 arg2 # Script echo &amp;quot;$1 - $2&amp;quot; # will print # arg1 - arg2  </description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.resources/</link>
+      <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.resources/</guid>
+      <description> https://learnxinyminutes.com/docs/bash/  </description>
+    </item>
+    
+  </channel>
+</rss>

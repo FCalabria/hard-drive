@@ -2,6 +2,7 @@ baseURL = "https://fcalabria.github.io/hard-drive/"
 languageCode = "en-us"
 title = "Hard drive"
 theme = "hugo-theme-learn"
+publishDir = "../"
 
 [params]
 editURL = "https://github.com/fcalabria/hard-drive"

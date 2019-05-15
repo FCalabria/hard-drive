@@ -5,7 +5,7 @@ theme = "hugo-theme-learn"
 publishDir = "../"
 
 [params]
-editURL = "https://github.com/fcalabria/hard-drive"
+editURL = "https://github.com/FCalabria/hard-drive/tree/master/src/content/"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

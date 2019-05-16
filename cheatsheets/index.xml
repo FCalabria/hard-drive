@@ -10,5 +10,14 @@
 	<atom:link href="https://fcalabria.github.io/hard-drive/cheatsheets/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Visual Studio Code</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/vscode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/vscode/</guid>
+      <description> Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -50,12 +50,24 @@
   </url>
   
   <url>
+    <loc>https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/</loc>
+  </url>
+  
+  <url>
     <loc>https://fcalabria.github.io/hard-drive/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://fcalabria.github.io/hard-drive/cheatsheets/</loc>
+  </url>
+  
+  <url>
+    <loc>https://fcalabria.github.io/hard-drive/dotfiles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://fcalabria.github.io/hard-drive/dotfiles/git/</loc>
   </url>
   
   <url>

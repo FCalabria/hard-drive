@@ -6,6 +6,7 @@ publishDir = "../"
 
 [params]
 editURL = "https://github.com/FCalabria/hard-drive/tree/master/src/content/"
+author = "FCalabria"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

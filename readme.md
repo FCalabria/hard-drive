@@ -12,15 +12,10 @@ Profit!
 
 ## How to change things and deploy
 
-_This will also be a script at some point. In a closer future._
+_This will be a Github action at some point._
 
 The editable files are in `src`. The files at the same level of this readme are automatically generated. Refer to [Hugo](https://gohugo.io/) docs if you have doubts.
 
 To run the development server do `cd src && hugo server`.
 
-To deploy:
-
-1. `cd src`
-2. `hugo`
-3. Comit all the changes, including the automatically generated.
-4. `git push` to master.
+To deploy run the `deploy.sh` script

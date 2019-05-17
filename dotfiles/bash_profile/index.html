@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.5" />
+    <meta name="description" content="">
+<meta name="author" content="FCalabria">
+
+    <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
+
+    <title>Bash :: Hard drive</title>
+
+    
+    <link href="/hard-drive/css/nucleus.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/fontawesome-all.min.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/hybrid.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/featherlight.min.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/perfect-scrollbar.min.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/auto-complete.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/atom-one-dark-reasonable.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/theme.css?1558087845" rel="stylesheet">
+    <link href="/hard-drive/css/hugo-theme.css?1558087845" rel="stylesheet">
+    
+
+    <script src="/hard-drive/js/jquery-3.3.1.min.js?1558087845"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/hard-drive/dotfiles/bash_profile/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://fcalabria.github.io/hard-drive/">
+  <img src="data:image/png;base64,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" alt="">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/hard-drive/js/lunr.min.js?1558087845"></script>
+<script type="text/javascript" src="/hard-drive/js/auto-complete.js?1558087845"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/fcalabria.github.io\/hard-drive\/";
+    
+</script>
+<script type="text/javascript" src="/hard-drive/js/search.js?1558087845"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hard-drive/tools-and-resources/" title="Tools and Resources" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hard-drive/tools-and-resources/">
+          <i class='fas fa-tools'></i> Tools and Resources
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/tools-and-resources/workspace-setup/" title="Workspace" class="dd-item ">
+        <a href="/hard-drive/tools-and-resources/workspace-setup/">
+        Workspace
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/tools-and-resources/testing-stuff/" title="Testing stuff" class="dd-item ">
+        <a href="/hard-drive/tools-and-resources/testing-stuff/">
+        Testing stuff
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/tools-and-resources/test-pending/" title="Test pending" class="dd-item ">
+        <a href="/hard-drive/tools-and-resources/test-pending/">
+        Test pending
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hard-drive/cheatsheets/" title="Cheatsheets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hard-drive/cheatsheets/">
+          <i class='fas fa-file-code'></i> Cheatsheets
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/hard-drive/cheatsheets/shell/" title="Shell" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/hard-drive/cheatsheets/shell/">
+          Shell
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.commands/" title="Commands" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/shell/shell.commands/">
+        Commands
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.writing/" title="Writing scripts" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/shell/shell.writing/">
+        Writing scripts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.running/" title="Running scripts" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/shell/shell.running/">
+        Running scripts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.resources/" title="Resources" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/shell/shell.resources/">
+        Resources
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/vscode/" title="Visual Studio Code" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/vscode/">
+        Visual Studio Code
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/hard-drive/dotfiles/" title="Dotfiles" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/hard-drive/dotfiles/">
+          <i class='fas fa-cogs'></i> Dotfiles
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/dotfiles/bash_profile/" title="Bash" class="dd-item active">
+        <a href="/hard-drive/dotfiles/bash_profile/">
+        Bash
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/dotfiles/git/" title="Git" class="dd-item ">
+        <a href="/hard-drive/dotfiles/git/">
+        Git
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <center>
+  <a class="github-button" href="https://github.com/FCalabria/hard-drive/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+  <a class="github-button" href="https://github.com/FCalabria/hard-drive/fork" data-icon="octicon-repo-forked" data-show-count="false" aria-label="Fork fcalabria/hard-drive on GitHub">Fork</a>
+
+  <a href="https://twitter.com/zurribulle?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @zurribulle</a>
+
+  <p style="margin-top:30px;">Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/dotfiles/bash_profile.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/dotfiles/'>Dotfiles</a> > Bash
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#aliases">Aliases</a></li>
+<li><a href="#other-stuff">Other stuff</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Bash
+            </h1>
+          
+
+        
+
+
+
+
+
+<h2 id="aliases">Aliases</h2>
+
+<ul>
+<li>Open the coverage report: <code>alias o:coverage='open -a &quot;Google Chrome&quot; coverage/html/index.html'</code></li>
+<li>Fetch and pull master: <code>alias git:updateAll='git stash -u &amp;&amp; git checkout master &amp;&amp; git fetch --all --prune &amp;&amp; git pull &amp;&amp; git checkout - &amp;&amp; echo -e &quot;\033[1mYour pending changes are stashed\033[00m&quot;'</code></li>
+<li>Delete all in location. Use with caution: <code>alias salla='rm -rf --'</code></li>
+<li>Show stale branches:</li>
+</ul>
+
+<pre><code class="language-sh">alias git:stale='git_stale'
+
+# I want to modify this function to delete the stale branches with an optional argument
+git_stale() {
+     show_stale() {
+       git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 &lt;(git branch -vv | grep origin) | awk '{print $1}'
+     }
+     show_stale
+}
+</code></pre>
+
+<h2 id="other-stuff">Other stuff</h2>
+
+<p>Show current git branch in command line. This is adapted for branch names like <em>MC-1234-that-is-a-jira-ticket-code</em>. It doesn&rsquo;t look very good with <em>master</em> but 🤷🏻</p>
+
+<pre><code class="language-sh">git_current_branch() {
+     git branch 2&gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+git_branch_code() {
+     git_current_branch | sed -n 's/\(.\{2\}-.\{4\}\)-.*/ \1/p'
+}
+git_branch_name() {
+     git_current_branch | sed -e 's/\(.\{2\}-.\{4\}-\)\(.*\)/ \2/' -e 's/-/ /g'
+}
+export PS1=&quot;\[\033[45m\]\t\[\033[00m\] \[\033[35m\]\W\[\033[00m\]\$(git_branch_code)\[\033[1m\]\$(git_branch_name)\[\033[00m\] \$ &quot;
+</code></pre>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/hard-drive/dotfiles/" title="Dotfiles"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/hard-drive/dotfiles/git/" title="Git" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/hard-drive/js/clipboard.min.js?1558087845"></script>
+    <script src="/hard-drive/js/perfect-scrollbar.min.js?1558087845"></script>
+    <script src="/hard-drive/js/perfect-scrollbar.jquery.min.js?1558087845"></script>
+    <script src="/hard-drive/js/jquery.sticky.js?1558087845"></script>
+    <script src="/hard-drive/js/featherlight.min.js?1558087845"></script>
+    <script src="/hard-drive/js/html5shiv-printshiv.min.js?1558087845"></script>
+    <script src="/hard-drive/js/highlight.pack.js?1558087845"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/hard-drive/js/modernizr.custom-3.6.0.js?1558087845"></script>
+    <script src="/hard-drive/js/learn.js?1558087845"></script>
+    <script src="/hard-drive/js/hugo-learn.js?1558087845"></script>
+
+    <link href="/hard-drive/mermaid/mermaid.css?1558087845" type="text/css" rel="stylesheet" />
+    <script src="/hard-drive/mermaid/mermaid.js?1558087845"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

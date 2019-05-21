@@ -6,6 +6,7 @@ Title: "Bash"
 
 - Open the coverage report: `alias o:coverage='open -a "Google Chrome" coverage/html/index.html'`
 - Fetch and pull master: `alias git:updateAll='git stash -u && git checkout master && git fetch --all --prune && git pull && git checkout - && echo -e "\033[1mYour pending changes are stashed\033[00m"'`
+- I forget to commit something: `alias git:ups='git add . && git amend && git push --force'`
 - Delete all in location. Use with caution: `alias salla='rm -rf --'`
 - Show stale branches:
 

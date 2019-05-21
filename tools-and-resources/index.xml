@@ -38,5 +38,14 @@
       <description> Faker CSS peek Regex previewer Dayjs Vuese eCSStractor MkDocs  </description>
     </item>
     
+    <item>
+      <title>Other tools</title>
+      <link>https://fcalabria.github.io/hard-drive/tools-and-resources/other-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/tools-and-resources/other-tools/</guid>
+      <description> Carbon Online generator for snapshots  </description>
+    </item>
+    
   </channel>
 </rss>

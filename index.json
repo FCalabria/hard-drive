@@ -74,7 +74,7 @@
 	"title": "Bash",
 	"tags": [],
 	"description": "",
-	"content": " Aliases  Open the coverage report: alias o:coverage='open -a \u0026quot;Google Chrome\u0026quot; coverage/html/index.html' Fetch and pull master: alias git:updateAll='git stash -u \u0026amp;\u0026amp; git checkout master \u0026amp;\u0026amp; git fetch --all --prune \u0026amp;\u0026amp; git pull \u0026amp;\u0026amp; git checkout - \u0026amp;\u0026amp; echo -e \u0026quot;\\033[1mYour pending changes are stashed\\033[00m\u0026quot;' Delete all in location. Use with caution: alias salla='rm -rf --' Show stale branches:  alias git:stale='git_stale' # I want to modify this function to delete the stale branches with an optional argument git_stale() { show_stale() { git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 \u0026lt;(git branch -vv | grep origin) | awk '{print $1}' } show_stale }  Other stuff Show current git branch in command line. This is adapted for branch names like MC-1234-that-is-a-jira-ticket-code. It doesn\u0026rsquo;t look very good with master but 🤷🏻\ngit_current_branch() { git branch 2\u0026gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/' } git_branch_code() { git_current_branch | sed -n 's/\\(.\\{2\\}-.\\{4\\}\\)-.*/ \\1/p' } git_branch_name() { git_current_branch | sed -e 's/\\(.\\{2\\}-.\\{4\\}-\\)\\(.*\\)/ \\2/' -e 's/-/ /g' } export PS1=\u0026quot;\\[\\033[45m\\]\\t\\[\\033[00m\\] \\[\\033[35m\\]\\W\\[\\033[00m\\]\\$(git_branch_code)\\[\\033[1m\\]\\$(git_branch_name)\\[\\033[00m\\] \\$ \u0026quot;  "
+	"content": " Aliases  Open the coverage report: alias o:coverage='open -a \u0026quot;Google Chrome\u0026quot; coverage/html/index.html' Fetch and pull master: alias git:updateAll='git stash -u \u0026amp;\u0026amp; git checkout master \u0026amp;\u0026amp; git fetch --all --prune \u0026amp;\u0026amp; git pull \u0026amp;\u0026amp; git checkout - \u0026amp;\u0026amp; echo -e \u0026quot;\\033[1mYour pending changes are stashed\\033[00m\u0026quot;' I forget to commit something: alias git:ups='git add . \u0026amp;\u0026amp; git amend \u0026amp;\u0026amp; git push --force' Delete all in location. Use with caution: alias salla='rm -rf --' Show stale branches:  alias git:stale='git_stale' # I want to modify this function to delete the stale branches with an optional argument git_stale() { show_stale() { git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 \u0026lt;(git branch -vv | grep origin) | awk '{print $1}' } show_stale }  Other stuff Show current git branch in command line. This is adapted for branch names like MC-1234-that-is-a-jira-ticket-code. It doesn\u0026rsquo;t look very good with master but 🤷🏻\ngit_current_branch() { git branch 2\u0026gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/' } git_branch_code() { git_current_branch | sed -n 's/\\(.\\{2\\}-.\\{4\\}\\)-.*/ \\1/p' } git_branch_name() { git_current_branch | sed -e 's/\\(.\\{2\\}-.\\{4\\}-\\)\\(.*\\)/ \\2/' -e 's/-/ /g' } export PS1=\u0026quot;\\[\\033[45m\\]\\t\\[\\033[00m\\] \\[\\033[35m\\]\\W\\[\\033[00m\\]\\$(git_branch_code)\\[\\033[1m\\]\\$(git_branch_name)\\[\\033[00m\\] \\$ \u0026quot;  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/categories/",
@@ -103,6 +103,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Cool combos  Unstage: alias.unstage reset HEAD -- Add changes to last commit: alias.amend commit --amend --no-edit Push a new branch creating the origin counterpart: alias.pushnew push -u origin HEAD Show last 10 commits: alias.hist log --pretty=format:'%ad | %Cgreen %s%d %Creset [%an] %Cblue%h' --graph --date=short -n 10 Show history as a tree: alias.tree log --oneline --all --graph --decorate  Just some shortcuts  alias.ch checkout alias.br branch alias.co commit  "
+},
+{
+	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/other-tools/",
+	"title": "Other tools",
+	"tags": [],
+	"description": "",
+	"content": " Carbon Online generator for snapshots  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tags/",

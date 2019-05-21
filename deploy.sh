@@ -5,7 +5,7 @@ set -e
 cd src
 hugo
 cd ..
-git add -u .
+git add .
 git reset -- src/*
 git commit -m "[Automated deploy]"
 git push

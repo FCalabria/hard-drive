@@ -12,18 +12,18 @@
     <title>Writing scripts :: Hard drive</title>
 
     
-    <link href="/hard-drive/css/nucleus.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/fontawesome-all.min.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/hybrid.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/featherlight.min.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/perfect-scrollbar.min.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/auto-complete.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/atom-one-dark-reasonable.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/theme.css?1560327106" rel="stylesheet">
-    <link href="/hard-drive/css/hugo-theme.css?1560327106" rel="stylesheet">
+    <link href="/hard-drive/css/nucleus.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/fontawesome-all.min.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/hybrid.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/featherlight.min.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/perfect-scrollbar.min.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/auto-complete.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/atom-one-dark-reasonable.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/theme.css?1561106386" rel="stylesheet">
+    <link href="/hard-drive/css/hugo-theme.css?1561106386" rel="stylesheet">
     
 
-    <script src="/hard-drive/js/jquery-3.3.1.min.js?1560327106"></script>
+    <script src="/hard-drive/js/jquery-3.3.1.min.js?1561106386"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/hard-drive/js/lunr.min.js?1560327106"></script>
-<script type="text/javascript" src="/hard-drive/js/auto-complete.js?1560327106"></script>
+<script type="text/javascript" src="/hard-drive/js/lunr.min.js?1561106386"></script>
+<script type="text/javascript" src="/hard-drive/js/auto-complete.js?1561106386"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/fcalabria.github.io\/hard-drive\/";
     
 </script>
-<script type="text/javascript" src="/hard-drive/js/search.js?1560327106"></script>
+<script type="text/javascript" src="/hard-drive/js/search.js?1561106386"></script>
 
     
   </div>
@@ -506,7 +506,10 @@
 <ul>
 <li><a href="#variables">Variables</a></li>
 <li><a href="#functions">Functions</a></li>
-<li><a href="#loops-and-conditionals">Loops and conditionals</a></li>
+<li><a href="#loops-and-conditionals">Loops and conditionals</a>
+<ul>
+<li><a href="#doing-more-than-check-in-the-same-conditional">Doing more than check in the same conditional</a></li>
+</ul></li>
 <li><a href="#fail-checks">Fail checks</a></li>
 </ul></li>
 </ul>
@@ -644,6 +647,31 @@ fi
 <li><code>-f &lt;filename&gt;</code> <em>filename</em> is a file and exists</li>
 <li><code>-z &quot;$&lt;variableName&gt;&quot;</code> <em>variableName</em> has a value</li>
 </ul>
+
+<p><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">More expresions</a></p>
+
+<h3 id="doing-more-than-check-in-the-same-conditional">Doing more than check in the same conditional</h3>
+
+<p>You can use the normal boolean operators like:</p>
+
+<pre><code class="language-bash">if [ &lt;comparison&gt; ] &amp;&amp; [ &lt;comparison&gt; ]; then
+  # Code here
+fi
+</code></pre>
+
+<p>Another option is use the <code>-a</code> and <code>-o</code> expresions:</p>
+
+<pre><code class="language-bash">## Equivalent to &amp;&amp;
+if [ &lt;comparison&gt; -a &lt;comparison&gt; ]; then
+  # Code here
+fi
+
+
+## Equivalent to ||
+if [ &lt;comparison&gt; -o &lt;comparison&gt; ]; then
+  # Code here
+fi
+</code></pre>
 
 <h2 id="fail-checks">Fail checks</h2>
 
@@ -965,20 +993,20 @@ fi
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/hard-drive/js/clipboard.min.js?1560327106"></script>
-    <script src="/hard-drive/js/perfect-scrollbar.min.js?1560327106"></script>
-    <script src="/hard-drive/js/perfect-scrollbar.jquery.min.js?1560327106"></script>
-    <script src="/hard-drive/js/jquery.sticky.js?1560327106"></script>
-    <script src="/hard-drive/js/featherlight.min.js?1560327106"></script>
-    <script src="/hard-drive/js/html5shiv-printshiv.min.js?1560327106"></script>
-    <script src="/hard-drive/js/highlight.pack.js?1560327106"></script>
+    <script src="/hard-drive/js/clipboard.min.js?1561106386"></script>
+    <script src="/hard-drive/js/perfect-scrollbar.min.js?1561106386"></script>
+    <script src="/hard-drive/js/perfect-scrollbar.jquery.min.js?1561106386"></script>
+    <script src="/hard-drive/js/jquery.sticky.js?1561106386"></script>
+    <script src="/hard-drive/js/featherlight.min.js?1561106386"></script>
+    <script src="/hard-drive/js/html5shiv-printshiv.min.js?1561106386"></script>
+    <script src="/hard-drive/js/highlight.pack.js?1561106386"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/hard-drive/js/modernizr.custom-3.6.0.js?1560327106"></script>
-    <script src="/hard-drive/js/learn.js?1560327106"></script>
-    <script src="/hard-drive/js/hugo-learn.js?1560327106"></script>
+    <script src="/hard-drive/js/modernizr.custom-3.6.0.js?1561106386"></script>
+    <script src="/hard-drive/js/learn.js?1561106386"></script>
+    <script src="/hard-drive/js/hugo-learn.js?1561106386"></script>
 
-    <link href="/hard-drive/mermaid/mermaid.css?1560327106" type="text/css" rel="stylesheet" />
-    <script src="/hard-drive/mermaid/mermaid.js?1560327106"></script>
+    <link href="/hard-drive/mermaid/mermaid.css?1561106386" type="text/css" rel="stylesheet" />
+    <script src="/hard-drive/mermaid/mermaid.js?1561106386"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

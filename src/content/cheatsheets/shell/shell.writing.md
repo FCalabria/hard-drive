@@ -121,6 +121,33 @@ Some comparators:
 - `-f <filename>` *filename* is a file and exists
 - `-z "$<variableName>"` *variableName* has a value
 
+[More expresions](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html)
+
+### Doing more than check in the same conditional
+
+You can use the normal boolean operators like:
+
+```bash
+if [ <comparison> ] && [ <comparison> ]; then
+  # Code here
+fi
+```
+
+Another option is use the `-a` and `-o` expresions:
+
+```bash
+## Equivalent to &&
+if [ <comparison> -a <comparison> ]; then
+  # Code here
+fi
+
+
+## Equivalent to ||
+if [ <comparison> -o <comparison> ]; then
+  # Code here
+fi
+```
+
 ## Fail checks
 
 You can check the number of arguments provided to a script with `$#`.

@@ -60,7 +60,7 @@
 	"title": "Hard drive",
 	"tags": [],
 	"description": "",
-	"content": " Hi, I\u0026rsquo;m Paqui (pronounced [ \u0026lsquo;pa ki ]) and I have a really bad memory. So this is my alternative memory for code-related stuff.\nMaybe you find it useful too.\n{{ range .Resources }} {{ .ResourceType | title }} {{ end }}\n"
+	"content": " Hi, I\u0026rsquo;m Paqui (pronounced [ \u0026lsquo;pa ki ]) and I have a really bad memory. So this is my alternative memory for code-related stuff.\nMaybe you find it useful too.\n"
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/",

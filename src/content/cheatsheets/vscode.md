@@ -14,3 +14,22 @@ title: "Visual Studio Code"
 - `cmd + shift + o` Go to symbol in file
 - `cmd + alt + k` Toggle bookmark (extension)
 - `cmd + alt + l/j` Next/previous bookmark (extension)
+
+## Others
+
+Add types to variables on javascript files:
+
+```javascript
+/** @type {HTMLLinkElement | null} */
+const myLink = document.querySelector('#the-link')
+```
+
+Define folder regions:
+
+```javascript
+// #region regionName
+
+// Some code here
+
+// #endregion
+```

@@ -79,7 +79,7 @@ You can pass arguments to a script the same way you pass them to a function
       <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.resources/</guid>
-      <description> https://learnxinyminutes.com/docs/bash/  </description>
+      <description> https://learnxinyminutes.com/docs/bash/ http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html  </description>
     </item>
     
     <item>
@@ -115,7 +115,7 @@ You can pass arguments to a script the same way you pass them to a function
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/vscode/</guid>
-      <description> Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  </description>
+      <description>Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  Others Add types to variables on javascript files:</description>
     </item>
     
   </channel>

@@ -46,7 +46,7 @@
 	"title": "Resources",
 	"tags": [],
 	"description": "",
-	"content": " https://learnxinyminutes.com/docs/bash/  "
+	"content": " https://learnxinyminutes.com/docs/bash/ http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/",
@@ -60,7 +60,7 @@
 	"title": "Hard drive",
 	"tags": [],
 	"description": "",
-	"content": " Hi, I\u0026rsquo;m Paqui (pronounced [ \u0026lsquo;pa ki ]) and I have a really bad memory. So this is my alternative memory for code-related stuff.\nMaybe you find it useful too.\n"
+	"content": " Hi, I\u0026rsquo;m Paqui (pronounced [ \u0026lsquo;pa ki ]) and I have a really bad memory. So this is my alternative memory for code-related stuff.\nMaybe you find it useful too.\n{{ range .Resources }} {{ .ResourceType | title }} {{ end }}\n"
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/",
@@ -123,5 +123,5 @@
 	"title": "Visual Studio Code",
 	"tags": [],
 	"description": "",
-	"content": " Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  "
+	"content": " Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  Others Add types to variables on javascript files:\n/** @type {HTMLLinkElement | null} */ const myLink = document.querySelector('#the-link')  Define folder regions:\n// #region regionName // Some code here // #endregion  "
 }]

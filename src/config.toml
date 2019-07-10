@@ -4,6 +4,7 @@ title = "Hard drive"
 theme = "hugo-theme-learn"
 publishDir = "../"
 
+enableEmoji = true
 [params]
 editURL = "https://github.com/FCalabria/hard-drive/tree/master/src/content/"
 author = "FCalabria"

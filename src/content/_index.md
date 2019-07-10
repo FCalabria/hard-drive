@@ -9,4 +9,4 @@ I'm Paqui (pronounced _[ 'pa ki ]_) and I have a really bad memory. So this is m
 
 Maybe you find it useful too.
 
-![pakichu](/hard-drive/images/pakichu.jpg)
+![pakichu](/hard-drive/images/pakichu.jpg?width=50%)

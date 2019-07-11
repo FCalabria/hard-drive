@@ -119,7 +119,7 @@ Some comparators:
 - `<a> -gt <b>` greater than
 - `<a> -eq <b>` numeric equal to
 - `-f <filename>` *filename* is a file and exists
-- `-z "$<variableName>"` *variableName* has a value
+- `-z "$<variableName>"` *variableName* has zero length (empty string)
 
 [More expresions](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html)
 

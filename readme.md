@@ -1,14 +1,8 @@
 # Paqui's hard drive
 
-## How to start working
+## Deps
 
-_This will be a script at some point. In the future._
-
-1. Install [Hugo](https://gohugo.io/getting-started/installing/)
-2. `cd src/themes`
-3. `git clone https://github.com/matcornic/hugo-theme-learn.git`
-
-Profit!
+- [Hugo](https://gohugo.io/getting-started/installing/)
 
 ## How to change things and deploy
 

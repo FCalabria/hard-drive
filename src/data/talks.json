@@ -1,0 +1,44 @@
+{
+  "talks": [
+    {
+      "url": "https://youtu.be/AHVnR0oLk6Y",
+      "speaker": "Belén Albeza",
+      "event": "Frontfest",
+      "date": "2018-02-17",
+      "cathegories": [],
+      "language": "es-ES",
+      "watched": true,
+      "title": "Mejorando como desarrolladores"
+    },
+    {
+      "url": "https://youtu.be/y2EeeWSfnRw",
+      "speaker": "Carlos Villuendas",
+      "event": "",
+      "date": "2019-05-26",
+      "cathegories": [],
+      "language": "es-ES",
+      "watched": false,
+      "title": "Performance: Real Time User Monitoring"
+    },
+    {
+      "url": "https://youtu.be/8aGhZQkoFbQ",
+      "speaker": "Philip Roberts",
+      "event": "JS Conf EU",
+      "date": "2014-10-09",
+      "cathegories": [],
+      "language": "en-EN",
+      "watched": false,
+      "title": "What the heck is the event loop anyway?"
+    },
+    {
+      "url": "https://youtu.be/A7FfQvh7IUc",
+      "speaker": "Ulises Gascón",
+      "event": "",
+      "date": "2019-03-25",
+      "cathegories": [],
+      "language": "es-ES",
+      "watched": false,
+      "title": "Desarrollando una app desde cero con Firebase"
+    }
+  ]
+}

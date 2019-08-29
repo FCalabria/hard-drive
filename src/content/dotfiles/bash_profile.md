@@ -8,6 +8,7 @@ Title: "Bash"
 - Fetch and pull master: `alias git:updateAll='git stash -u && git checkout master && git fetch --all --prune && git pull && git checkout - && echo -e "\033[1mYour pending changes are stashed\033[00m"'`
 - I forget to commit something: `alias git:ups='git add . && git amend && git push --force'`
 - Delete all in location. Use with caution: `alias salla='rm -rf --'`
+- Remove all node_modules (thanks to (Carlos)[https://mobile.twitter.com/carlosvillu/status/1166991558002057217]): `alias purge-node-modules='find . -name node_modules -type d -prune -exec trash {} +'`
 - Show stale branches:
 
 ```sh

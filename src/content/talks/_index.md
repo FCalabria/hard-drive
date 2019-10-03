@@ -7,5 +7,3 @@ chapter: true
 # Talks
 
 Tech talks I want to watch or save to revisit. May include also video tutorials.
-
-{{% talks %}}

@@ -7,7 +7,7 @@
   <ul>
   {{ range sort .Site.Data.talks.talks "date" }}
   {{ $talk := . }}
-    <li><a href="{{ $talk.url }}" target="_blank">{{ $talk.title }}</a> - {{ $talk.speaker }} {{ if $talk.event }} @{{ $talk.event }} {{ end }}</li>
+    <li><a href="{{ $talk.url }}" target="_blank">{{ $talk.title }}</a> - {{ $talk.speaker }} {{ with $talk.event }} @{{ . }} {{ end }}</li>
   {{ end }}
   </ul>
 </div>

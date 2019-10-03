@@ -1,5 +1,10 @@
 <div style="display:grid; grid-template-columns: repeat(2, 1fr); grid-gap: 16px">
-  {{ range sort .Site.Data.talks.talks "date" }}
+  {{ $filtered := .Site.Data.talks.talks }}
+  {{/* if .Get "watched" */}}
+    {{/* $filtered = where $filtered "watched" (eq . "true") */}}
+  {{/* end */}}
+  {{ $sorted := sort $filtered "date" }}
+  {{ range $sorted }}
   {{ $talk := . }}
   <div>
     <h4>{{ $talk.title }}</h4>

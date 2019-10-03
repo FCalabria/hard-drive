@@ -39,6 +39,16 @@
       "language": "es-ES",
       "watched": false,
       "title": "Desarrollando una app desde cero con Firebase"
+    },
+    {
+      "url": "https://youtu.be/xVlixI92Tho",
+      "speaker": "Angie Jones",
+      "event": "Full Stack Fest",
+      "date": "2019-09-06",
+      "cathegories": [],
+      "language": "en-EN",
+      "watched": false,
+      "title": "Your Tests Lack Vision: Adding Eyes to Your Automation Framework"
     }
   ]
 }

@@ -1,0 +1,5 @@
+{{ $image := .Page.Resources.GetMatch (.Get 0) }}
+{{ with $image }}
+{{ $resized := $image.Resize "400x" }}
+  <img src="{{ $resized.Permalink }}" width="{{ $resized.Width }}" alt="{{ $.Get 1 }}">
+{{ end }}

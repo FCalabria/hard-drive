@@ -1,8 +1,9 @@
 <div style="display:grid; grid-template-columns: repeat(2, 1fr); grid-gap: 16px">
   {{ $filtered := .Site.Data.talks.talks }}
-  {{/* if .Get "watched" */}}
-    {{/* $filtered = where $filtered "watched" (eq . "true") */}}
-  {{/* end */}}
+  {{ if .Get "watched" }}
+    {{ $watched := eq (.Get "watched") "true" }}
+    {{ $filtered = where $filtered "watched" $watched }}
+  {{ end }}
   {{ $sorted := sort $filtered "date" }}
   {{ range $sorted }}
   {{ $talk := . }}

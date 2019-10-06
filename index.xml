@@ -83,6 +83,16 @@ You can pass arguments to a script the same way you pass them to a function
     </item>
     
     <item>
+      <title>All talks</title>
+      <link>https://fcalabria.github.io/hard-drive/talks/all-talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/talks/all-talks/</guid>
+      <description>Filters here
+ What the heck is the event loop anyway?     Mejorando como desarrolladores     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     </description>
+    </item>
+    
+    <item>
       <title>Bash</title>
       <link>https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

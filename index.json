@@ -53,7 +53,7 @@
 	"title": "Talks",
 	"tags": [],
 	"description": "",
-	"content": " Talks Tech talks I want to watch or save to revisit. May include also video tutorials.\n  What the heck is the event loop anyway?      Mejorando como desarrolladores      Desarrollando una app desde cero con Firebase      Performance: Real Time User Monitoring      Your Tests Lack Vision: Adding Eyes to Your Automation Framework      "
+	"content": " Talks Tech talks I want to watch or save to revisit. May include also video tutorials.\n"
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/",
@@ -75,6 +75,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Shell # Say hello Hello=\u0026quot;Hello world!\u0026quot; echo \u0026quot;$Hello\u0026quot;  "
+},
+{
+	"uri": "https://fcalabria.github.io/hard-drive/talks/all-talks/",
+	"title": "All talks",
+	"tags": [],
+	"description": "",
+	"content": "Filters here\n What the heck is the event loop anyway?     Mejorando como desarrolladores     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/",

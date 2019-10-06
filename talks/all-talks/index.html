@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
 
-    <title>Commands :: Hard drive</title>
+    <title>All talks :: Hard drive</title>
 
     
     <link href="/hard-drive/css/nucleus.css?1570398431" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hard-drive/cheatsheets/shell/shell.commands/">
+  <body class="" data-url="/hard-drive/talks/all-talks/">
     <nav id="sidebar" class="">
 
 
@@ -76,7 +76,7 @@
   
     
     <li data-nav-id="/hard-drive/talks/" title="Talks" class="dd-item 
-        
+        parent
         
         
         ">
@@ -100,7 +100,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/talks/all-talks/" title="All talks" class="dd-item ">
+      <li data-nav-id="/hard-drive/talks/all-talks/" title="All talks" class="dd-item active">
         <a href="/hard-drive/talks/all-talks/">
         All talks
         
@@ -235,7 +235,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/" title="Cheatsheets" class="dd-item 
-        parent
+        
         
         
         ">
@@ -262,7 +262,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/shell/" title="Shell" class="dd-item 
-        parent
+        
         
         
         ">
@@ -286,7 +286,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.commands/" title="Commands" class="dd-item active">
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.commands/" title="Commands" class="dd-item ">
         <a href="/hard-drive/cheatsheets/shell/shell.commands/">
         Commands
         
@@ -501,7 +501,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/shell/shell.commands.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/talks/all-talks.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -532,13 +532,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/shell/'>Shell</a> > Commands
-          
-         
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/talks/'>Talks</a> > All talks
           
          
           
@@ -551,14 +545,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#chaining-commands">Chaining commands</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -574,7 +561,7 @@
           
             <h1>
               
-              Commands
+              All talks
             </h1>
           
 
@@ -582,51 +569,51 @@
 
 
 
+<p>Filters here</p>
 
-
-<ul>
-<li><code>cat &lt;filename&gt;</code> logs a file</li>
-<li><code>head -n &lt;number&gt; &lt;filename&gt;</code> logs the first <em>number</em> lines of a file</li>
-<li><code>tail -n &lt;number&gt; &lt;filename&gt;</code> logs the last <em>number</em> lines of a file</li>
-
-<li><p><code>grep &lt;text&gt; &lt;filename&gt;</code>logs the lines containing <em>text</em> on the file</p>
-
-<ul>
-<li><code>-v --invert-match</code> logs the lines not containing <em>text</em> on the file</li>
-<li><code>-i --ignore-case</code> matches independently of the case</li>
-<li><code>-E</code> support for all regex instead of <code>&lt;text&gt;</code></li>
-<li><code>-r</code> recursively searchs in all files. Use it with a directory instead of <em>filename</em>
-<br /></li>
-</ul></li>
-
-<li><p><code>tree</code> logs the directory structure like a tree, including nested</p></li>
-
-<li><p><code>sed 's/&lt;oldExpresion&gt;/&lt;newExpresion&gt;/' &lt;filename&gt;</code> logs the file substituting <em>oldExpresion</em> for <em>newExpresion</em></p>
-
-<ul>
-<li><code>-E</code> support for all regex instead of <code>&lt;oldExpresion&gt;</code></li>
-<li><code>-i 'subfix'</code> modify the original file and save the original one adding <code>subfix</code> to the name (for example, .old). If no subfix is provided, will not create the backup</li>
-</ul></li>
-
-<li><p><code>mv &lt;filename1&gt; &lt;filename2&gt;</code> renames <em>filename1</em> to <em>filename2</em></p></li>
-
-<li><p><code>&gt; &lt;filename&gt;</code> Will write the shell <em>stdout</em> to the file (replacing content)</p></li>
-
-<li><p><code>2&gt; &lt;filename&gt;</code> Will write the shell <em>stderror</em> to the file (replacing content)</p></li>
-
-<li><p><code>&amp;&gt; &lt;filename&gt;</code> Will write the shell <em>stdout</em> and <em>stderror</em> to the file (replacing content)</p></li>
-
-<li><p><code>&gt;&gt; &lt;filename&gt;</code> Will append the shell <em>stdout</em> to the file</p></li>
-
-<li><p><code>echo $?</code> Will print the exit code of the last command. 0 means no error.</p></li>
-</ul>
-
-<h2 id="chaining-commands">Chaining commands</h2>
-
-<ul>
-<li><code>&lt;command&gt; | &lt;command&gt;</code> Will run the first <em>command</em> and pass its output as the argument for the second <em>command</em></li>
-<li><code>&lt;command&gt; ; &lt;command&gt;</code> Will run both commands, independently of their output (i/ errors)</li>
-</ul>
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); grid-gap: 16px">
+  
+  
+  <div>
+    <h4>What the heck is the event loop anyway?</h4>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="//www.youtube.com/embed/8aGhZQkoFbQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="What the heck is the event loop anyway?"></iframe>
+    </div>
+  </div>
+  
+  
+  <div>
+    <h4>Mejorando como desarrolladores</h4>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="//www.youtube.com/embed/AHVnR0oLk6Y" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Mejorando como desarrolladores"></iframe>
+    </div>
+  </div>
+  
+  
+  <div>
+    <h4>Desarrollando una app desde cero con Firebase</h4>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="//www.youtube.com/embed/A7FfQvh7IUc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Desarrollando una app desde cero con Firebase"></iframe>
+    </div>
+  </div>
+  
+  
+  <div>
+    <h4>Performance: Real Time User Monitoring</h4>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="//www.youtube.com/embed/y2EeeWSfnRw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Performance: Real Time User Monitoring"></iframe>
+    </div>
+  </div>
+  
+  
+  <div>
+    <h4>Your Tests Lack Vision: Adding Eyes to Your Automation Framework</h4>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="//www.youtube.com/embed/xVlixI92Tho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="Your Tests Lack Vision: Adding Eyes to Your Automation Framework"></iframe>
+    </div>
+  </div>
+  
+</div>
 
 
 <footer class=" footline" >
@@ -665,8 +652,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -680,6 +665,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -700,18 +686,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -720,9 +696,6 @@
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -772,44 +745,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -822,13 +761,57 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
                     
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -952,10 +935,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hard-drive/cheatsheets/shell/" title="Shell"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hard-drive/talks/" title="Talks"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hard-drive/cheatsheets/shell/shell.writing/" title="Writing scripts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hard-drive/tools-and-resources/" title="Tools and Resources" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

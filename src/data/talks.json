@@ -49,6 +49,36 @@
       "language": "en-EN",
       "watched": false,
       "title": "Your Tests Lack Vision: Adding Eyes to Your Automation Framework"
+    },
+    {
+      "url": "https://youtu.be/Lw1H9Owj2Mo",
+      "speaker": "Ana Encinar",
+      "event": "JS Day ES",
+      "date": "2018-11-02",
+      "cathegories": [],
+      "language": "es-ES",
+      "watched": true,
+      "title": "Front Performance"
+    },
+    {
+      "url": "https://youtu.be/yFE4iWkrI2Y",
+      "speaker": "Rubén Valseca",
+      "event": "JS Day ES",
+      "date": "2018-11-02",
+      "cathegories": [],
+      "language": "es-ES",
+      "watched": false,
+      "title": "¿Cómo funciona un virtual DOM?"
+    },
+    {
+      "url": "https://youtu.be/tqO5twGswYY?t=358",
+      "speaker": "Jorge Barroso",
+      "event": "",
+      "date": "2019-09-30",
+      "cathegories": [],
+      "language": "es-ES",
+      "watched": false,
+      "title": "¿Cómo preparar una charla?"
     }
   ]
 }

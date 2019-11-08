@@ -18,7 +18,17 @@
       
       <guid>https://fcalabria.github.io/hard-drive/talks/all-talks/</guid>
       <description>Filters here
- What the heck is the event loop anyway?     Mejorando como desarrolladores     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     </description>
+ What the heck is the event loop anyway?     Mejorando como desarrolladores     Front Performance     ¿Cómo funciona un virtual DOM?     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     ¿Cómo preparar una charla?</description>
+    </item>
+    
+    <item>
+      <title>By language</title>
+      <link>https://fcalabria.github.io/hard-drive/talks/bylanguage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/talks/bylanguage/</guid>
+      <description>es-ES
+ What the heck is the event loop anyway?     Mejorando como desarrolladores     Front Performance     ¿Cómo funciona un virtual DOM?     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     ¿Cómo preparar una charla?</description>
     </item>
     
   </channel>

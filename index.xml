@@ -17,8 +17,7 @@
       <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</guid>
-      <description>cat &amp;lt;filename&amp;gt; logs a file head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file
- -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
+      <description>cat &amp;lt;filename&amp;gt; logs a file head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file  -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
     </item>
     
     <item>
@@ -89,7 +88,7 @@ You can pass arguments to a script the same way you pass them to a function
       
       <guid>https://fcalabria.github.io/hard-drive/talks/all-talks/</guid>
       <description>Filters here
- What the heck is the event loop anyway?     Mejorando como desarrolladores     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     </description>
+ What the heck is the event loop anyway?     Mejorando como desarrolladores     Front Performance     ¿Cómo funciona un virtual DOM?     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     ¿Cómo preparar una charla?</description>
     </item>
     
     <item>
@@ -99,6 +98,16 @@ You can pass arguments to a script the same way you pass them to a function
       
       <guid>https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/</guid>
       <description>Aliases  Open the coverage report: alias o:coverage=&#39;open -a &amp;quot;Google Chrome&amp;quot; coverage/html/index.html&#39; Fetch and pull master: alias git:updateAll=&#39;git stash -u &amp;amp;&amp;amp; git checkout master &amp;amp;&amp;amp; git fetch --all --prune &amp;amp;&amp;amp; git pull &amp;amp;&amp;amp; git checkout - &amp;amp;&amp;amp; echo -e &amp;quot;\033[1mYour pending changes are stashed\033[00m&amp;quot;&#39; I forget to commit something: alias git:ups=&#39;git add . &amp;amp;&amp;amp; git amend &amp;amp;&amp;amp; git push --force&#39; Delete all in location. Use with caution: alias salla=&#39;rm -rf --&#39; Remove all node_modules (thanks to (Carlos)[https://mobile.</description>
+    </item>
+    
+    <item>
+      <title>By language</title>
+      <link>https://fcalabria.github.io/hard-drive/talks/bylanguage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/talks/bylanguage/</guid>
+      <description>es-ES
+ What the heck is the event loop anyway?     Mejorando como desarrolladores     Front Performance     ¿Cómo funciona un virtual DOM?     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     ¿Cómo preparar una charla?</description>
     </item>
     
     <item>

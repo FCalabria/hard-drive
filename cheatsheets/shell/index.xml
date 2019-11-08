@@ -17,8 +17,7 @@
       <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</guid>
-      <description>cat &amp;lt;filename&amp;gt; logs a file head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file
- -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
+      <description>cat &amp;lt;filename&amp;gt; logs a file head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file  -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
     </item>
     
     <item>

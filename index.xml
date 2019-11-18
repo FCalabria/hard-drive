@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Js differences</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/python/python.js-differences/</link>
+      <pubDate>Mon, 18 Nov 2019 12:47:40 +0200</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/python/python.js-differences/</guid>
+      <description>True and False are uppercase. and, or, is and not are keywords to compare and negate. None is an object. Always compare with is instead of ==. Using boolean logical operators on ints casts them to booleans for evaluation, but their non-cast value is returned. Don&amp;rsquo;t mix up with bool(ints) and &amp;amp; or |.
+bool(4) # =&amp;gt; True bool(-6) # =&amp;gt; True 0 and 2 # =&amp;gt; 0 -5 or 0 # =&amp;gt; -5  You can chain &amp;lt; and so.</description>
+    </item>
+    
+    <item>
       <title>Commands</title>
       <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</link>
       <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
 
-    <title>Running scripts :: Hard drive</title>
+    <title>Js differences :: Hard drive</title>
 
     
     <link href="/hard-drive/css/nucleus.css?1574082372" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hard-drive/cheatsheets/shell/shell.running/">
+  <body class="" data-url="/hard-drive/cheatsheets/python/python.js-differences/">
     <nav id="sidebar" class="">
 
 
@@ -281,7 +281,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/python/" title="Python" class="dd-item 
-        
+        parent
         
         
         ">
@@ -305,7 +305,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/python/python.js-differences/" title="Js differences" class="dd-item ">
+      <li data-nav-id="/hard-drive/cheatsheets/python/python.js-differences/" title="Js differences" class="dd-item active">
         <a href="/hard-drive/cheatsheets/python/python.js-differences/">
         Js differences
         
@@ -334,7 +334,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/shell/" title="Shell" class="dd-item 
-        parent
+        
         
         
         ">
@@ -396,7 +396,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.running/" title="Running scripts" class="dd-item active">
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.running/" title="Running scripts" class="dd-item ">
         <a href="/hard-drive/cheatsheets/shell/shell.running/">
         Running scripts
         
@@ -573,7 +573,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/shell/shell.running.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/python/python.js-differences.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -608,7 +608,7 @@
             
           
           
-            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/shell/'>Shell</a> > Running scripts
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/python/'>Python</a> > Js differences
           
          
           
@@ -623,7 +623,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#lists">Lists</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -639,7 +646,7 @@
           
             <h1>
               
-              Running scripts
+              Js differences
             </h1>
           
 
@@ -647,23 +654,67 @@
 
 
 
-<p><code>#!/bin/sh</code> at the begining allows the script to be run writing just <code>myscript.sh</code> instead of <code>sh myscript.sh</code> on the command line.</p>
 
-<p>For this to work you may need to set the file as executable (<code>chmod +x &lt;filename&gt;.sh</code>)</p>
 
-<p>You can pass arguments to a script the same way you pass them to a function</p>
+<ul>
+<li><code>True</code> and <code>False</code> are uppercase.</li>
+<li><code>and</code>, <code>or</code>, <code>is</code> and <code>not</code> are keywords to compare and negate.</li>
+<li><code>None</code> is an object. Always compare with <code>is</code> instead of <code>==</code>.</li>
 
-<pre><code class="language-bash">
-# Command line
-./my-script.sh arg1 arg2
+<li><p>Using boolean logical operators on ints casts them to booleans for evaluation, but their non-cast value is returned. Don&rsquo;t mix up with <code>bool(ints)</code> and <code>&amp;</code> or <code>|</code>.</p>
 
-# Script
+<pre><code class="language-python">bool(4)     # =&gt; True
+bool(-6)    # =&gt; True
+0 and 2     # =&gt; 0
+-5 or 0     # =&gt; -5
+</code></pre></li>
 
-echo &quot;$1 - $2&quot;
+<li><p>You can chain <code>&lt;</code> and so.</p>
 
-# will print
-# arg1 - arg2
-</code></pre>
+<pre><code class="language-python">1 &lt; 2 and 2 &lt; 3
+# Is the same as
+1 &lt; 2 &lt; 3
+</code></pre></li>
+
+<li><p><code>==</code> checks the value, <code>is</code> checks the reference.</p>
+
+<pre><code class="language-python">a = [1, 2, 3, 4]
+b = [1, 2, 3, 4]  # Point b at a new list, [1, 2, 3, 4]
+b is a            # =&gt; False
+b == a            # =&gt; True
+</code></pre></li>
+
+<li><p><code>len(&quot;This returns the string length&quot;)</code></p></li>
+
+<li><p>Different ways to format strings on Python3:</p>
+
+<pre><code class="language-python">&quot;{} can be {}&quot;.format(&quot;Strings&quot;, &quot;interpolated&quot;)  # =&gt; &quot;Strings can be interpolated&quot;
+&quot;{0} be nimble, 0} jump over the {1}&quot;.format(&quot;Jack&quot;, &quot;candle stick&quot;)
+# =&gt; &quot;Jack be nimble, Jack jump over the candle stick&quot;
+&quot;{name} wants to eat {food}&quot;.format(name=&quot;Bob&quot;, food=&quot;lasagna&quot;)  # =&gt; &quot;Bob wants to eat lasagna&quot;
+</code></pre></li>
+
+<li><p>Getting user input: <code>some_variable = input(&quot;Give me your input: &quot;)</code>.</p></li>
+
+<li><p>No variable declaration, just assign.</p></li>
+</ul>
+
+<h2 id="lists">Lists</h2>
+
+<ul>
+<li>Mainly work as arrays. Index start at 0.</li>
+<li><code>some_list[-1]</code> will get the last element.</li>
+<li>Looking for inexistent index throws an error.</li>
+<li><code>some_list[1:3]</code> will get the range between 1 and 3.</li>
+<li><code>some_list[2:]</code> will get all the elements starting from the index 2.</li>
+<li><code>some_list[::2]</code> will get every second entry.</li>
+
+<li><p><code>some_list[::-1]</code> will get the list in reversed order.</p></li>
+
+<li><p><code>some_list.remove(&quot;Element with this text&quot;)</code></p></li>
+
+<li><p><code>del some_list[0]</code> removes the first element</p></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -849,6 +900,40 @@ echo &quot;$1 - $2&quot;
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -876,30 +961,10 @@ echo &quot;$1 - $2&quot;
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -932,26 +997,6 @@ echo &quot;$1 - $2&quot;
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -987,6 +1032,43 @@ echo &quot;$1 - $2&quot;
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1011,30 +1093,10 @@ echo &quot;$1 - $2&quot;
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1067,26 +1129,6 @@ echo &quot;$1 - $2&quot;
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1165,10 +1207,10 @@ echo &quot;$1 - $2&quot;
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hard-drive/cheatsheets/shell/shell.writing/" title="Writing scripts"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hard-drive/cheatsheets/python/" title="Python"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hard-drive/cheatsheets/shell/shell.resources/" title="Resources" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hard-drive/cheatsheets/shell/" title="Shell" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

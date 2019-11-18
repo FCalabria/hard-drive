@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
 
-    <title>Running scripts :: Hard drive</title>
+    <title>Python :: Hard drive</title>
 
     
     <link href="/hard-drive/css/nucleus.css?1574082372" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hard-drive/cheatsheets/shell/shell.running/">
+  <body class="" data-url="/hard-drive/cheatsheets/python/">
     <nav id="sidebar" class="">
 
 
@@ -281,8 +281,8 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/python/" title="Python" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/hard-drive/cheatsheets/python/">
@@ -334,7 +334,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/shell/" title="Shell" class="dd-item 
-        parent
+        
         
         
         ">
@@ -396,7 +396,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.running/" title="Running scripts" class="dd-item active">
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.running/" title="Running scripts" class="dd-item ">
         <a href="/hard-drive/cheatsheets/shell/shell.running/">
         Running scripts
         
@@ -573,7 +573,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/shell/shell.running.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/python/_index.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -587,8 +587,6 @@
                           <i class="fas fa-bars"></i>
                         </a>
                     </span>
-                  
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
                   
                   <span class="links">
                  
@@ -604,13 +602,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/shell/'>Shell</a> > Running scripts
-          
-         
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > Python
           
          
           
@@ -621,13 +613,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -635,42 +620,39 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Running scripts
-            </h1>
           
 
         
 
 
 
-<p><code>#!/bin/sh</code> at the begining allows the script to be run writing just <code>myscript.sh</code> instead of <code>sh myscript.sh</code> on the command line.</p>
 
-<p>For this to work you may need to set the file as executable (<code>chmod +x &lt;filename&gt;.sh</code>)</p>
+	
 
-<p>You can pass arguments to a script the same way you pass them to a function</p>
+<h1 id="python">Python</h1>
 
-<pre><code class="language-bash">
-# Command line
-./my-script.sh arg1 arg2
+<pre><code class="language-python">
+# Say hello
 
-# Script
+hello_world = &quot;Hello, World!&quot;
 
-echo &quot;$1 - $2&quot;
+print(hello_world)
 
-# will print
-# arg1 - arg2
 </code></pre>
+
+
+
 
 
 <footer class=" footline" >
 	
 </footer>
 
-
+        
+            </div> 
         
         </div> 
         
@@ -849,8 +831,6 @@ echo &quot;$1 - $2&quot;
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -864,6 +844,9 @@ echo &quot;$1 - $2&quot;
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -884,7 +867,6 @@ echo &quot;$1 - $2&quot;
             
                 
                     
-                    
                 
                 
 
@@ -897,9 +879,6 @@ echo &quot;$1 - $2&quot;
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -933,7 +912,6 @@ echo &quot;$1 - $2&quot;
             
                 
                     
-                    
                 
                 
 
@@ -949,9 +927,6 @@ echo &quot;$1 - $2&quot;
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -987,38 +962,6 @@ echo &quot;$1 - $2&quot;
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1047,6 +990,22 @@ echo &quot;$1 - $2&quot;
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -1068,7 +1027,6 @@ echo &quot;$1 - $2&quot;
             
                 
                     
-                    
                 
                 
 
@@ -1085,8 +1043,21 @@ echo &quot;$1 - $2&quot;
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1165,10 +1136,10 @@ echo &quot;$1 - $2&quot;
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hard-drive/cheatsheets/shell/shell.writing/" title="Writing scripts"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hard-drive/cheatsheets/vscode/" title="Visual Studio Code"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hard-drive/cheatsheets/shell/shell.resources/" title="Resources" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hard-drive/cheatsheets/python/python.js-differences/" title="Js differences" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1198,4 +1169,3 @@ echo &quot;$1 - $2&quot;
 
   </body>
 </html>
-

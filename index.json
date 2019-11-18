@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/python/python.js-differences/",
+	"title": "Js differences",
+	"tags": [],
+	"description": "",
+	"content": "  True and False are uppercase. and, or, is and not are keywords to compare and negate. None is an object. Always compare with is instead of ==. Using boolean logical operators on ints casts them to booleans for evaluation, but their non-cast value is returned. Don\u0026rsquo;t mix up with bool(ints) and \u0026amp; or |.\nbool(4) # =\u0026gt; True bool(-6) # =\u0026gt; True 0 and 2 # =\u0026gt; 0 -5 or 0 # =\u0026gt; -5  You can chain \u0026lt; and so.\n1 \u0026lt; 2 and 2 \u0026lt; 3 # Is the same as 1 \u0026lt; 2 \u0026lt; 3  == checks the value, is checks the reference.\na = [1, 2, 3, 4] b = [1, 2, 3, 4] # Point b at a new list, [1, 2, 3, 4] b is a # =\u0026gt; False b == a # =\u0026gt; True  len(\u0026quot;This returns the string length\u0026quot;)\n Different ways to format strings on Python3:\n\u0026quot;{} can be {}\u0026quot;.format(\u0026quot;Strings\u0026quot;, \u0026quot;interpolated\u0026quot;) # =\u0026gt; \u0026quot;Strings can be interpolated\u0026quot; \u0026quot;{0} be nimble, 0} jump over the {1}\u0026quot;.format(\u0026quot;Jack\u0026quot;, \u0026quot;candle stick\u0026quot;) # =\u0026gt; \u0026quot;Jack be nimble, Jack jump over the candle stick\u0026quot; \u0026quot;{name} wants to eat {food}\u0026quot;.format(name=\u0026quot;Bob\u0026quot;, food=\u0026quot;lasagna\u0026quot;) # =\u0026gt; \u0026quot;Bob wants to eat lasagna\u0026quot;  Getting user input: some_variable = input(\u0026quot;Give me your input: \u0026quot;).\n No variable declaration, just assign.\n  Lists  Mainly work as arrays. Index start at 0. some_list[-1] will get the last element. Looking for inexistent index throws an error. some_list[1:3] will get the range between 1 and 3. some_list[2:] will get all the elements starting from the index 2. some_list[::2] will get every second entry. some_list[::-1] will get the list in reversed order.\n some_list.remove(\u0026quot;Element with this text\u0026quot;)\n del some_list[0] removes the first element\n  "
+},
+{
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/",
 	"title": "Commands",
 	"tags": [],
@@ -47,6 +54,13 @@
 	"tags": [],
 	"description": "",
 	"content": " https://learnxinyminutes.com/docs/bash/ http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html  "
+},
+{
+	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/python/",
+	"title": "Python",
+	"tags": [],
+	"description": "",
+	"content": " Python # Say hello hello_world = \u0026quot;Hello, World!\u0026quot; print(hello_world)  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/talks/",

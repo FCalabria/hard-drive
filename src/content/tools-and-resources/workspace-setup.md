@@ -17,3 +17,7 @@ weight: 1
 
 - [VSCode icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons) Nice set of icons for vscode
 - [Fira code](https://github.com/tonsky/FiraCode) Best programming font ever
+
+## CL tools
+
+- [Fx](https://github.com/antonmedv/fx) JSON processing tool

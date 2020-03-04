@@ -22,3 +22,12 @@ echo "$1 - $2"
 # will print
 # arg1 - arg2
 ```
+
+If you copy or move a script without the `.sh` to a folder in the `PATH` it can be executed as a command line tool. For example:
+
+```bash
+$ cp my-script.sh /usr/bin/my-script
+
+# Execute it
+$ my-script
+```

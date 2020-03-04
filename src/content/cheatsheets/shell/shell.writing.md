@@ -108,6 +108,8 @@ fi
 ```bash
 if <condition>; then
   # Code here
+elif <another condition>; then
+  #Code here
 else
   # Code here
 fi
@@ -144,6 +146,14 @@ fi
 
 ## Equivalent to ||
 if [ <comparison> -o <comparison> ]; then
+  # Code here
+fi
+```
+
+Or double brackets:
+
+```bash
+if [[ <comparison> && <comparison> ]]; then
   # Code here
 fi
 ```

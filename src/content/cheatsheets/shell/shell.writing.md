@@ -115,7 +115,7 @@ else
 fi
 ```
 
-{{% notice tip %}}
+{{% notice warning %}}
 To enter an if when a variable is true _if [ $VARIABLE ];_ won't work. The correct way is _if [ "$VARIABLE" = true ];_
 {{% /notice %}}
 

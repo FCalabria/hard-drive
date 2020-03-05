@@ -25,6 +25,10 @@ weight: 1
 - `>> <filename>` Will append the shell *stdout* to the file
 - `echo $?` Will print the exit code of the last command. 0 means no error.
 
+{{% notice tip %}}
+To hide the output of a command, use _&> /dev/null_
+{{% /notice %}}
+
 ## Chaining commands
 
 - `<command> | <command>` Will run the first *command* and pass its output as the argument for the second *command*

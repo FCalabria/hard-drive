@@ -115,6 +115,10 @@ else
 fi
 ```
 
+{{% notice tip %}}
+To enter an if when a variable is true _if [ $VARIABLE ];_ won't work. The correct way is _if [ "$VARIABLE" = true ];_
+{{% /notice %}}
+
 Some comparators:
 
 - `<a> -lt <b>` less than

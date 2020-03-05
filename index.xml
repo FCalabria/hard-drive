@@ -70,7 +70,7 @@ If you don&amp;rsquo;t use quotes at all and your variable has whitespaces, it w
       <description>#!/bin/sh at the begining allows the script to be run writing just myscript.sh instead of sh myscript.sh on the command line.
 For this to work you may need to set the file as executable (chmod +x &amp;lt;filename&amp;gt;.sh)
 You can pass arguments to a script the same way you pass them to a function
-# Command line ./my-script.sh arg1 arg2 # Script echo &amp;quot;$1 - $2&amp;quot; # will print # arg1 - arg2  </description>
+# Command line ./my-script.sh arg1 arg2 # Script echo &amp;quot;$1 - $2&amp;quot; # will print # arg1 - arg2  If you copy or move a script without the .</description>
     </item>
     
     <item>

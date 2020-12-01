@@ -3,6 +3,7 @@
 ## Deps
 
 - [Hugo](https://gohugo.io/getting-started/installing/)
+- The theme is listed as a submodule, after `git clone` you need to run `git submodule init` and `git submodule update`
 
 ## How to change things and deploy
 

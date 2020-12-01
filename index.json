@@ -4,42 +4,42 @@
 	"title": "Js differences",
 	"tags": [],
 	"description": "",
-	"content": "  True and False are uppercase. and, or, is and not are keywords to compare and negate. None is an object. Always compare with is instead of ==. Using boolean logical operators on ints casts them to booleans for evaluation, but their non-cast value is returned. Don\u0026rsquo;t mix up with bool(ints) and \u0026amp; or |.\nbool(4) # =\u0026gt; True bool(-6) # =\u0026gt; True 0 and 2 # =\u0026gt; 0 -5 or 0 # =\u0026gt; -5  You can chain \u0026lt; and so.\n1 \u0026lt; 2 and 2 \u0026lt; 3 # Is the same as 1 \u0026lt; 2 \u0026lt; 3  == checks the value, is checks the reference.\na = [1, 2, 3, 4] b = [1, 2, 3, 4] # Point b at a new list, [1, 2, 3, 4] b is a # =\u0026gt; False b == a # =\u0026gt; True  len(\u0026quot;This returns the string length\u0026quot;)\n Different ways to format strings on Python3:\n\u0026quot;{} can be {}\u0026quot;.format(\u0026quot;Strings\u0026quot;, \u0026quot;interpolated\u0026quot;) # =\u0026gt; \u0026quot;Strings can be interpolated\u0026quot; \u0026quot;{0} be nimble, 0} jump over the {1}\u0026quot;.format(\u0026quot;Jack\u0026quot;, \u0026quot;candle stick\u0026quot;) # =\u0026gt; \u0026quot;Jack be nimble, Jack jump over the candle stick\u0026quot; \u0026quot;{name} wants to eat {food}\u0026quot;.format(name=\u0026quot;Bob\u0026quot;, food=\u0026quot;lasagna\u0026quot;) # =\u0026gt; \u0026quot;Bob wants to eat lasagna\u0026quot;  Getting user input: some_variable = input(\u0026quot;Give me your input: \u0026quot;).\n No variable declaration, just assign.\n  Lists  Mainly work as arrays. Index start at 0. some_list[-1] will get the last element. Looking for inexistent index throws an error. some_list[1:3] will get the range between 1 and 3. some_list[2:] will get all the elements starting from the index 2. some_list[::2] will get every second entry. some_list[::-1] will get the list in reversed order.\n some_list.remove(\u0026quot;Element with this text\u0026quot;)\n del some_list[0] removes the first element\n  "
+	"content": " True and False are uppercase. and, or, is and not are keywords to compare and negate. None is an object. Always compare with is instead of ==. Using boolean logical operators on ints casts them to booleans for evaluation, but their non-cast value is returned. Don\u0026rsquo;t mix up with bool(ints) and \u0026amp; or |.  bool(4) # =\u0026gt; True bool(-6) # =\u0026gt; True 0 and 2 # =\u0026gt; 0 -5 or 0 # =\u0026gt; -5  You can chain \u0026lt; and so.  1 \u0026lt; 2 and 2 \u0026lt; 3 # Is the same as 1 \u0026lt; 2 \u0026lt; 3  == checks the value, is checks the reference.  a = [1, 2, 3, 4] b = [1, 2, 3, 4] # Point b at a new list, [1, 2, 3, 4] b is a # =\u0026gt; False b == a # =\u0026gt; True  len(\u0026quot;This returns the string length\u0026quot;) Different ways to format strings on Python3:  \u0026#34;{} can be {}\u0026#34;.format(\u0026#34;Strings\u0026#34;, \u0026#34;interpolated\u0026#34;) # =\u0026gt; \u0026#34;Strings can be interpolated\u0026#34; \u0026#34;{0} be nimble, 0} jump over the {1}\u0026#34;.format(\u0026#34;Jack\u0026#34;, \u0026#34;candle stick\u0026#34;) # =\u0026gt; \u0026#34;Jack be nimble, Jack jump over the candle stick\u0026#34; \u0026#34;{name} wants to eat {food}\u0026#34;.format(name=\u0026#34;Bob\u0026#34;, food=\u0026#34;lasagna\u0026#34;) # =\u0026gt; \u0026#34;Bob wants to eat lasagna\u0026#34;  Getting user input: some_variable = input(\u0026quot;Give me your input: \u0026quot;). No variable declaration, just assign.  Lists   Mainly work as arrays. Index start at 0.\n  some_list[-1] will get the last element.\n  Looking for inexistent index throws an error.\n  some_list[1:3] will get the range between 1 and 3.\n  some_list[2:] will get all the elements starting from the index 2.\n  some_list[::2] will get every second entry.\n  some_list[::-1] will get the list in reversed order.\n  some_list.remove(\u0026quot;Element with this text\u0026quot;)\n  del some_list[0] removes the first element\n  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/",
 	"title": "Commands",
 	"tags": [],
 	"description": "",
-	"content": "  cat \u0026lt;filename\u0026gt; logs a file head -n \u0026lt;number\u0026gt; \u0026lt;filename\u0026gt; logs the first number lines of a file tail -n \u0026lt;number\u0026gt; \u0026lt;filename\u0026gt; logs the last number lines of a file grep \u0026lt;text\u0026gt; \u0026lt;filename\u0026gt;logs the lines containing text on the file  -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of \u0026lt;text\u0026gt; -r recursively searchs in all files. Use it with a directory instead of filename  find \u0026lt;directory-to-look\u0026gt; -name \u0026lt;name\u0026gt; finds a file or directory with name. Use -iname for case insensitive search. Add -type d to look just for directories.\n tree logs the directory structure like a tree, including nested\n sed 's/\u0026lt;oldExpresion\u0026gt;/\u0026lt;newExpresion\u0026gt;/' \u0026lt;filename\u0026gt; logs the file substituting oldExpresion for newExpresion\n -E support for all regex instead of \u0026lt;oldExpresion\u0026gt; -i 'subfix' modify the original file and save the original one adding subfix to the name (for example, .old). If no subfix is provided, will not create the backup  mv \u0026lt;filename1\u0026gt; \u0026lt;filename2\u0026gt; renames filename1 to filename2\n \u0026gt; \u0026lt;filename\u0026gt; Will write the shell stdout to the file (replacing content)\n 2\u0026gt; \u0026lt;filename\u0026gt; Will write the shell stderror to the file (replacing content)\n \u0026amp;\u0026gt; \u0026lt;filename\u0026gt; Will write the shell stdout and stderror to the file (replacing content)\n \u0026gt;\u0026gt; \u0026lt;filename\u0026gt; Will append the shell stdout to the file\n echo $? Will print the exit code of the last command. 0 means no error.\n  To hide the output of a command, use \u0026amp;\u0026gt; /dev/null\n Chaining commands  \u0026lt;command\u0026gt; | \u0026lt;command\u0026gt; Will run the first command and pass its output as the argument for the second command \u0026lt;command\u0026gt; ; \u0026lt;command\u0026gt; Will run both commands, independently of their output (i/ errors)  "
+	"content": "  cat \u0026lt;filename\u0026gt; logs a file\n  head -n \u0026lt;number\u0026gt; \u0026lt;filename\u0026gt; logs the first number lines of a file\n  tail -n \u0026lt;number\u0026gt; \u0026lt;filename\u0026gt; logs the last number lines of a file\n  grep \u0026lt;text\u0026gt; \u0026lt;filename\u0026gt;logs the lines containing text on the file\n -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of \u0026lt;text\u0026gt; -r recursively searchs in all files. Use it with a directory instead of filename    find \u0026lt;directory-to-look\u0026gt; -name \u0026lt;name\u0026gt; finds a file or directory with name. Use -iname for case insensitive search. Add -type d to look just for directories.\n  tree logs the directory structure like a tree, including nested\n  sed 's/\u0026lt;oldExpresion\u0026gt;/\u0026lt;newExpresion\u0026gt;/' \u0026lt;filename\u0026gt; logs the file substituting oldExpresion for newExpresion\n -E support for all regex instead of \u0026lt;oldExpresion\u0026gt; -i 'subfix' modify the original file and save the original one adding subfix to the name (for example, .old). If no subfix is provided, will not create the backup    mv \u0026lt;filename1\u0026gt; \u0026lt;filename2\u0026gt; renames filename1 to filename2\n  \u0026gt; \u0026lt;filename\u0026gt; Will write the shell stdout to the file (replacing content)\n  2\u0026gt; \u0026lt;filename\u0026gt; Will write the shell stderror to the file (replacing content)\n  \u0026amp;\u0026gt; \u0026lt;filename\u0026gt; Will write the shell stdout and stderror to the file (replacing content)\n  \u0026gt;\u0026gt; \u0026lt;filename\u0026gt; Will append the shell stdout to the file\n  echo $? Will print the exit code of the last command. 0 means no error.\n  To hide the output of a command, use \u0026amp;\u0026gt; /dev/null\n Chaining commands  \u0026lt;command\u0026gt; | \u0026lt;command\u0026gt; Will run the first command and pass its output as the argument for the second command \u0026lt;command\u0026gt; ; \u0026lt;command\u0026gt; Will run both commands, independently of their output (i/ errors)  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/workspace-setup/",
 	"title": "Workspace",
 	"tags": [],
 	"description": "",
-	"content": " VSCode extensions  Bracket pair colorizer Easily detect brackets pairs. Git blame See git blame information about a line on the bottom bar. Import cost Display the weight you are adding to your project with each import. Polacode Pretty snapshots of your code, without external tools. SVG Minimizer, previewer, autocomplete\u0026hellip; all the tools you need for svg images. Licenser Automatically add license in files. Compatible with a lot of filetypes.  Themes, icons\u0026hellip;  VSCode icons Nice set of icons for vscode Fira code Best programming font ever  CL tools  Fx JSON processing tool  "
+	"content": "VSCode extensions  Bracket pair colorizer Easily detect brackets pairs. Git blame See git blame information about a line on the bottom bar. Import cost Display the weight you are adding to your project with each import. Polacode Pretty snapshots of your code, without external tools. SVG Minimizer, previewer, autocomplete\u0026hellip; all the tools you need for svg images. Licenser Automatically add license in files. Compatible with a lot of filetypes.  Themes, icons\u0026hellip;  VSCode icons Nice set of icons for vscode Fira code Best programming font ever  CL tools  Fx JSON processing tool  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.writing/",
 	"title": "Writing scripts",
 	"tags": [],
 	"description": "",
-	"content": " set -e The script will exit early if any line fails\nset -o pipefail The script will mark lines as failed if any piped command on it fails\nVariables Variables are declared just like this varname=value but to be referenced need to have a $ before $varname\nDouble quotes enable variable interpolation, while single quotes don\u0026rsquo;t. Use with care.\nIf you don\u0026rsquo;t use quotes at all and your variable has whitespaces, it will be interpreted as different arguments.\nmyVar=1 echo \u0026quot;This is my var $myVar\u0026quot; # This is my var 1 echo 'This is my var $myVar' # This is my var $myVar  To assign the output of a command to a variable, you need to encapsulate it like myVar=$(echo \u0026quot;here\u0026quot;).\n# This will error myVar=echo \u0026quot;here\u0026quot; # This will set myVar to here myVar=$(echo \u0026quot;here\u0026quot;)  Functions # Declaration \u0026lt;functionName\u0026gt;() { # Code here firstArgument=$1 # etc } # Call \u0026lt;functionName\u0026gt; \u0026lt;args\u0026gt; # For example printSomething(){ echo \u0026quot;$1 and also $2\u0026quot; } printSomething \u0026quot;text\u0026quot; \u0026quot;other text\u0026quot; # will print # text and also other text  Loops and conditionals for \u0026lt;varname\u0026gt; in \u0026lt;collection\u0026gt;; do # Code here done # For example for file in src/*.md; do echo \u0026quot;$file\u0026quot; done  If is done to work with standard error codes and if a comand exits with anything but a 0, it will evaluate to false.\nWe can use the -q flag to avoid outputs of anything on the if check\nif \u0026lt;command\u0026gt;; then # Code here fi # For example if grep -q port \u0026quot;$file\u0026quot;; then echo \u0026quot;$file\u0026quot; fi  Or to compare expresions\nif [ \u0026lt;comparison\u0026gt; ]; then # Code here fi # For example if [ \u0026quot;$port\u0026quot; -lt 5000 ]; then echo \u0026quot;Port is under 5000\u0026quot; fi  if \u0026lt;condition\u0026gt;; then # Code here elif \u0026lt;another condition\u0026gt;; then #Code here else # Code here fi  To enter an if when a variable is true if [ $VARIABLE ]; won\u0026rsquo;t work. The correct way is if [ \u0026ldquo;$VARIABLE\u0026rdquo; = true ];\n Some comparators:\n \u0026lt;a\u0026gt; -lt \u0026lt;b\u0026gt; less than \u0026lt;a\u0026gt; -gt \u0026lt;b\u0026gt; greater than \u0026lt;a\u0026gt; -eq \u0026lt;b\u0026gt; numeric equal to -f \u0026lt;filename\u0026gt; filename is a file and exists -z \u0026quot;$\u0026lt;variableName\u0026gt;\u0026quot; variableName has zero length (empty string)  More expresions\nDoing more than check in the same conditional You can use the normal boolean operators like:\nif [ \u0026lt;comparison\u0026gt; ] \u0026amp;\u0026amp; [ \u0026lt;comparison\u0026gt; ]; then # Code here fi  Another option is use the -a and -o expresions:\n## Equivalent to \u0026amp;\u0026amp; if [ \u0026lt;comparison\u0026gt; -a \u0026lt;comparison\u0026gt; ]; then # Code here fi ## Equivalent to || if [ \u0026lt;comparison\u0026gt; -o \u0026lt;comparison\u0026gt; ]; then # Code here fi  Or double brackets:\nif [[ \u0026lt;comparison\u0026gt; \u0026amp;\u0026amp; \u0026lt;comparison\u0026gt; ]]; then # Code here fi  Fail checks You can check the number of arguments provided to a script with $#.\nSo a fail check can be\nif [ $# -eq 0 ]; then echo \u0026quot;Arguments missing\u0026quot; exit 64 fi  "
+	"content": "set -e The script will exit early if any line fails\nset -o pipefail The script will mark lines as failed if any piped command on it fails\nVariables Variables are declared just like this varname=value but to be referenced need to have a $ before $varname\nDouble quotes enable variable interpolation, while single quotes don\u0026rsquo;t. Use with care.\nIf you don\u0026rsquo;t use quotes at all and your variable has whitespaces, it will be interpreted as different arguments.\nmyVar=1 echo \u0026#34;This is my var $myVar\u0026#34; # This is my var 1 echo \u0026#39;This is my var $myVar\u0026#39; # This is my var $myVar To assign the output of a command to a variable, you need to encapsulate it like myVar=$(echo \u0026quot;here\u0026quot;).\n# This will error myVar=echo \u0026#34;here\u0026#34; # This will set myVar to here myVar=$(echo \u0026#34;here\u0026#34;) Functions # Declaration \u0026lt;functionName\u0026gt;() { # Code here firstArgument=$1 # etc } # Call \u0026lt;functionName\u0026gt; \u0026lt;args\u0026gt; # For example printSomething(){ echo \u0026#34;$1and also $2\u0026#34; } printSomething \u0026#34;text\u0026#34; \u0026#34;other text\u0026#34; # will print # text and also other text Loops and conditionals for \u0026lt;varname\u0026gt; in \u0026lt;collection\u0026gt;; do # Code here done # For example for file in src/*.md; do echo \u0026#34;$file\u0026#34; done If is done to work with standard error codes and if a comand exits with anything but a 0, it will evaluate to false.\nWe can use the -q flag to avoid outputs of anything on the if check\nif \u0026lt;command\u0026gt;; then # Code here fi # For example if grep -q port \u0026#34;$file\u0026#34;; then echo \u0026#34;$file\u0026#34; fi Or to compare expresions\nif [ \u0026lt;comparison\u0026gt; ]; then # Code here fi # For example if [ \u0026#34;$port\u0026#34; -lt 5000 ]; then echo \u0026#34;Port is under 5000\u0026#34; fi if \u0026lt;condition\u0026gt;; then # Code here elif \u0026lt;another condition\u0026gt;; then #Code here else # Code here fi  To enter an if when a variable is true if [ $VARIABLE ]; won\u0026rsquo;t work. The correct way is if [ \u0026ldquo;$VARIABLE\u0026rdquo; = true ];\n Some comparators:\n \u0026lt;a\u0026gt; -lt \u0026lt;b\u0026gt; less than \u0026lt;a\u0026gt; -gt \u0026lt;b\u0026gt; greater than \u0026lt;a\u0026gt; -eq \u0026lt;b\u0026gt; numeric equal to -f \u0026lt;filename\u0026gt; filename is a file and exists -z \u0026quot;$\u0026lt;variableName\u0026gt;\u0026quot; variableName has zero length (empty string)  More expresions\nDoing more than check in the same conditional You can use the normal boolean operators like:\nif [ \u0026lt;comparison\u0026gt; ] \u0026amp;\u0026amp; [ \u0026lt;comparison\u0026gt; ]; then # Code here fi Another option is use the -a and -o expresions:\n## Equivalent to \u0026amp;\u0026amp; if [ \u0026lt;comparison\u0026gt; -a \u0026lt;comparison\u0026gt; ]; then # Code here fi ## Equivalent to || if [ \u0026lt;comparison\u0026gt; -o \u0026lt;comparison\u0026gt; ]; then # Code here fi Or double brackets:\nif [[ \u0026lt;comparison\u0026gt; \u0026amp;\u0026amp; \u0026lt;comparison\u0026gt; ]]; then # Code here fi Fail checks You can check the number of arguments provided to a script with $#.\nSo a fail check can be\nif [ $# -eq 0 ]; then echo \u0026#34;Arguments missing\u0026#34; exit 64 fi "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/testing-stuff/",
 	"title": "Testing stuff",
 	"tags": [],
 	"description": "",
-	"content": " Tools  Pact Keep your front-back contract green without writing more tests. Stryker mutator Mutation testing Very unstable and non-trustable reports.  Readings  Different types of testing explained Introductory article. The art of unit testing, Roy Osherove Book covering from the basics to how to implement testing in the organization. Mocking is a code smell, Eric Elliott Article about why having a lot of mocks in unit tests is a bad signal, and how to avoid them  "
+	"content": "Tools  Pact Keep your front-back contract green without writing more tests. Stryker mutator Mutation testing Very unstable and non-trustable reports.  Readings  Different types of testing explained Introductory article. The art of unit testing, Roy Osherove Book covering from the basics to how to implement testing in the organization. Mocking is a code smell, Eric Elliott Article about why having a lot of mocks in unit tests is a bad signal, and how to avoid them  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.running/",
 	"title": "Running scripts",
 	"tags": [],
 	"description": "",
-	"content": "#!/bin/sh at the begining allows the script to be run writing just myscript.sh instead of sh myscript.sh on the command line.\nFor this to work you may need to set the file as executable (chmod +x \u0026lt;filename\u0026gt;.sh)\nYou can pass arguments to a script the same way you pass them to a function\n# Command line ./my-script.sh arg1 arg2 # Script echo \u0026quot;$1 - $2\u0026quot; # will print # arg1 - arg2  If you copy or move a script without the .sh to a folder in the PATH it can be executed as a command line tool. For example:\n$ cp my-script.sh /usr/bin/my-script # Execute it $ my-script  "
+	"content": "#!/bin/sh at the begining allows the script to be run writing just myscript.sh instead of sh myscript.sh on the command line.\nFor this to work you may need to set the file as executable (chmod +x \u0026lt;filename\u0026gt;.sh)\nYou can pass arguments to a script the same way you pass them to a function\n# Command line ./my-script.sh arg1 arg2 # Script echo \u0026#34;$1- $2\u0026#34; # will print # arg1 - arg2 If you copy or move a script without the .sh to a folder in the PATH it can be executed as a command line tool. For example:\n$ cp my-script.sh /usr/bin/my-script # Execute it $ my-script "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/test-pending/",
@@ -56,60 +56,46 @@
 	"content": " https://learnxinyminutes.com/docs/bash/ http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html  "
 },
 {
+	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/",
+	"title": "Cheatsheets",
+	"tags": [],
+	"description": "",
+	"content": "Cheatsheets Will evolve with my needs\n"
+},
+{
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/python/",
 	"title": "Python",
 	"tags": [],
 	"description": "",
-	"content": " Python # Say hello hello_world = \u0026quot;Hello, World!\u0026quot; print(hello_world)  "
-},
-{
-	"uri": "https://fcalabria.github.io/hard-drive/talks/",
-	"title": "Talks",
-	"tags": [],
-	"description": "",
-	"content": " Talks Tech talks I want to watch or save to revisit. May include also video tutorials.\n"
+	"content": "Python # Say hello hello_world = \u0026#34;Hello, World!\u0026#34; print(hello_world) "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/",
 	"title": "Tools and Resources",
 	"tags": [],
 	"description": "",
-	"content": " Tools and resources Here you will find very opinionated lists with things that I use on my daily basis\n"
+	"content": "Tools and resources Here you will find very opinionated lists with things that I use on my daily basis\n"
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/",
 	"title": "Hard drive",
 	"tags": [],
 	"description": "",
-	"content": " 👋 Hi, I\u0026rsquo;m Paqui (pronounced [ \u0026lsquo;pa ki ]) and I have a really bad memory. So this is my alternative memory for code-related stuff.\nMaybe you find it useful too.\n"
+	"content": "👋 Hi, I\u0026rsquo;m Paqui (pronounced [ \u0026lsquo;pa ki ]) and I have a really bad memory. So this is my alternative memory for code-related stuff.\nMaybe you find it useful too.\n"
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/shell/",
 	"title": "Shell",
 	"tags": [],
 	"description": "",
-	"content": " Shell # Say hello Hello=\u0026quot;Hello world!\u0026quot; echo \u0026quot;$Hello\u0026quot;  "
-},
-{
-	"uri": "https://fcalabria.github.io/hard-drive/talks/all-talks/",
-	"title": "All talks",
-	"tags": [],
-	"description": "",
-	"content": "Filters here\n What the heck is the event loop anyway?     Mejorando como desarrolladores     Front Performance     ¿Cómo funciona un virtual DOM?     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     ¿Cómo preparar una charla?     "
+	"content": "Shell # Say hello Hello=\u0026#34;Hello world!\u0026#34; echo \u0026#34;$Hello\u0026#34; "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/",
 	"title": "Bash",
 	"tags": [],
 	"description": "",
-	"content": " Aliases  Open the coverage report: alias o:coverage='open -a \u0026quot;Google Chrome\u0026quot; coverage/html/index.html' Fetch and pull master: alias git:updateAll='git stash -u \u0026amp;\u0026amp; git checkout master \u0026amp;\u0026amp; git fetch --all --prune \u0026amp;\u0026amp; git pull \u0026amp;\u0026amp; git checkout - \u0026amp;\u0026amp; echo -e \u0026quot;\\033[1mYour pending changes are stashed\\033[00m\u0026quot;' I forget to commit something: alias git:ups='git add . \u0026amp;\u0026amp; git amend \u0026amp;\u0026amp; git push --force' Delete all in location. Use with caution: alias salla='rm -rf --' Remove all node_modules (thanks to (Carlos)[https://mobile.twitter.com/carlosvillu/status/1166991558002057217]): alias purge-node-modules='find . -name node_modules -type d -prune -exec trash {} +' Show stale branches:\nalias git:stale='git_stale' # I want to modify this function to delete the stale branches with an optional argument git_stale() { show_stale() { git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 \u0026lt;(git branch -vv | grep origin) | awk '{print $1}' } show_stale }   Other stuff Show current git branch in command line. This is adapted for branch names like MC-1234-that-is-a-jira-ticket-code. It doesn\u0026rsquo;t look very good with master but 🤷🏻\ngit_current_branch() { git branch 2\u0026gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/' } git_branch_code() { git_current_branch | sed -n 's/\\(.\\{2\\}-.\\{4\\}\\)-.*/ \\1/p' } git_branch_name() { git_current_branch | sed -e 's/\\(.\\{2\\}-.\\{4\\}-\\)\\(.*\\)/ \\2/' -e 's/-/ /g' } export PS1=\u0026quot;\\[\\033[45m\\]\\t\\[\\033[00m\\] \\[\\033[35m\\]\\W\\[\\033[00m\\]\\$(git_branch_code)\\[\\033[1m\\]\\$(git_branch_name)\\[\\033[00m\\] \\$ \u0026quot;  "
-},
-{
-	"uri": "https://fcalabria.github.io/hard-drive/talks/bylanguage/",
-	"title": "By language",
-	"tags": [],
-	"description": "",
-	"content": "es-ES\n What the heck is the event loop anyway?     Mejorando como desarrolladores     Front Performance     ¿Cómo funciona un virtual DOM?     Desarrollando una app desde cero con Firebase     Performance: Real Time User Monitoring     Your Tests Lack Vision: Adding Eyes to Your Automation Framework     ¿Cómo preparar una charla?     "
+	"content": "Aliases  Open the coverage report: alias o:coverage='open -a \u0026quot;Google Chrome\u0026quot; coverage/html/index.html' Delete all in location. Use with caution: alias salla='rm -rf --' Remove all node_modules (thanks to Carlos): alias purge-node-modules='find . -name node_modules -type d -prune -exec trash {} +' Show stale branches:  alias git:stale=\u0026#39;git_stale\u0026#39; # I want to modify this function to delete the stale branches with an optional argument git_stale() { show_stale() { git branch -r | awk \u0026#39;{print $1}\u0026#39; | egrep -v -f /dev/fd/0 \u0026lt;(git branch -vv | grep origin) | awk \u0026#39;{print $1}\u0026#39; } show_stale } Other stuff Show current git branch in command line. This is adapted for branch names like MC-1234-that-is-a-jira-ticket-code or folder/MC-1234-that-is-a-jira-ticket-code\ngit_current_branch() { git branch 2\u0026gt; /dev/null | sed -e \u0026#39;/^[^*]/d\u0026#39; -e \u0026#39;s/* \\(.*\\)/\\1/\u0026#39; } git_branch_code() { git_current_branch | sed -n \u0026#39;s/.*\\([A-Z]\\{2\\}-.\\{4\\}\\)-.*/ \\1/p\u0026#39; } git_branch_name() { git_current_branch | sed -e \u0026#39;s/\\([a-zA-Z]*\\)\\{0,1\\}\\/\\{0,1\\}[A-Z]\\{2\\}-.\\{4\\}-\\(.*\\)/[\\1] \\2/\u0026#39; -e \u0026#39;s/-/ /g\u0026#39; -e \u0026#39;s/\\[\\] //g\u0026#39; } export PS1=\u0026#34;\\[\\033[45m\\]\\t\\[\\033[00m\\] \\[\\033[35m\\]\\W\\[\\033[00m\\]\\$(git_branch_code) \\[\\033[1m\\]\\$(git_branch_name)\\[\\033[00m\\] \\$ \u0026#34; "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/categories/",
@@ -119,25 +105,18 @@
 	"content": ""
 },
 {
-	"uri": "https://fcalabria.github.io/hard-drive/cheatsheets/",
-	"title": "Cheatsheets",
-	"tags": [],
-	"description": "",
-	"content": " Cheatsheets Will evolve with my needs\n"
-},
-{
 	"uri": "https://fcalabria.github.io/hard-drive/dotfiles/",
 	"title": "Dotfiles",
 	"tags": [],
 	"description": "",
-	"content": " Dotfiles Dotfiles and config settings for common software\n"
+	"content": "Dotfiles Dotfiles and config settings for common software\n"
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/dotfiles/git/",
 	"title": "Git",
 	"tags": [],
 	"description": "",
-	"content": " Cool combos  Unstage: alias.unstage reset HEAD -- Add changes to last commit: alias.amend commit --amend --no-edit Push a new branch creating the origin counterpart: alias.pushnew push -u origin HEAD Show last 10 commits: alias.hist log --pretty=format:'%ad | %Cgreen %s%d %Creset [%an] %Cblue%h' --graph --date=short -n 10 Show history as a tree: alias.tree log --oneline --all --graph --decorate  Just some shortcuts  alias.ch checkout alias.br branch alias.co commit  "
+	"content": "Cool combos  Unstage: unstage = reset HEAD -- Add changes to last commit: amend = commit --amend --no-edit The \u0026ldquo;I forgot to delete a console.log\u0026rdquo; comand: ups = !git add . \u0026amp;\u0026amp; git amend \u0026amp;\u0026amp; git push --force Push a new branch creating the origin counterpart: pushnew = push -u origin HEAD Update remote references and pull master: updateAll = !git stash -u \u0026amp;\u0026amp; git checkout master \u0026amp;\u0026amp; git fetch --all --prune \u0026amp;\u0026amp; git pull \u0026amp;\u0026amp; git checkout - Show last 10 commits: hist = log --pretty=format:'%ad | %Cgreen %s%d %Creset [%an] %Cblue%h' --graph --date=short -n 10 Show history as a tree: tree = log --oneline --all --graph --decorate  Just some shortcuts  alias.ch checkout alias.br branch alias.co commit  "
 },
 {
 	"uri": "https://fcalabria.github.io/hard-drive/tools-and-resources/other-tools/",
@@ -158,5 +137,5 @@
 	"title": "Visual Studio Code",
 	"tags": [],
 	"description": "",
-	"content": " Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  Others Add types to variables on javascript files:\n/** @type {HTMLLinkElement | null} */ const myLink = document.querySelector('#the-link')  Define folder regions:\n// #region regionName // Some code here // #endregion  "
+	"content": "Visual shortcuts  cmd + B Toogle side bar cmd + alt + right/left arrow Next/previous editor cmd + number Change editor group cmd + ctrl + right/left arrow Split or move file to group  Navigation shortcuts  cmd + shift + o Go to symbol in file cmd + alt + k Toggle bookmark (extension) cmd + alt + l/j Next/previous bookmark (extension)  Others Add types to variables on javascript files:\n/** @type {HTMLLinkElement | null} */ const myLink = document.querySelector(\u0026#39;#the-link\u0026#39;) Define folder regions:\n// #region regionName  // Some code here  // #endregion "
 }]

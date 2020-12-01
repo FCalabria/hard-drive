@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -40,13 +40,13 @@
   </url>
   
   <url>
-    <loc>https://fcalabria.github.io/hard-drive/cheatsheets/python/</loc>
+    <loc>https://fcalabria.github.io/hard-drive/cheatsheets/</loc>
     <lastmod>2019-11-18T12:42:30+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fcalabria.github.io/hard-drive/talks/</loc>
-    <lastmod>2019-08-23T23:46:00+02:00</lastmod>
+    <loc>https://fcalabria.github.io/hard-drive/cheatsheets/python/</loc>
+    <lastmod>2019-11-18T12:42:30+01:00</lastmod>
   </url>
   
   <url>
@@ -65,23 +65,11 @@
   </url>
   
   <url>
-    <loc>https://fcalabria.github.io/hard-drive/talks/all-talks/</loc>
-  </url>
-  
-  <url>
     <loc>https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/</loc>
   </url>
   
   <url>
-    <loc>https://fcalabria.github.io/hard-drive/talks/bylanguage/</loc>
-  </url>
-  
-  <url>
     <loc>https://fcalabria.github.io/hard-drive/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://fcalabria.github.io/hard-drive/cheatsheets/</loc>
   </url>
   
   <url>

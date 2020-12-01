@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dotfiles on Hard drive</title>
     <link>https://fcalabria.github.io/hard-drive/dotfiles/</link>
     <description>Recent content in Dotfiles on Hard drive</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fcalabria.github.io/hard-drive/dotfiles/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fcalabria.github.io/hard-drive/dotfiles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash</title>
       <link>https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/dotfiles/bash_profile/</guid>
-      <description>Aliases  Open the coverage report: alias o:coverage=&#39;open -a &amp;quot;Google Chrome&amp;quot; coverage/html/index.html&#39; Fetch and pull master: alias git:updateAll=&#39;git stash -u &amp;amp;&amp;amp; git checkout master &amp;amp;&amp;amp; git fetch --all --prune &amp;amp;&amp;amp; git pull &amp;amp;&amp;amp; git checkout - &amp;amp;&amp;amp; echo -e &amp;quot;\033[1mYour pending changes are stashed\033[00m&amp;quot;&#39; I forget to commit something: alias git:ups=&#39;git add . &amp;amp;&amp;amp; git amend &amp;amp;&amp;amp; git push --force&#39; Delete all in location. Use with caution: alias salla=&#39;rm -rf --&#39; Remove all node_modules (thanks to (Carlos)[https://mobile.</description>
+      <description>Aliases  Open the coverage report: alias o:coverage=&#39;open -a &amp;quot;Google Chrome&amp;quot; coverage/html/index.html&#39; Delete all in location. Use with caution: alias salla=&#39;rm -rf --&#39; Remove all node_modules (thanks to Carlos): alias purge-node-modules=&#39;find . -name node_modules -type d -prune -exec trash {} +&#39; Show stale branches:  alias git:stale=&amp;#39;git_stale&amp;#39; # I want to modify this function to delete the stale branches with an optional argument git_stale() { show_stale() { git branch -r | awk &amp;#39;{print $1}&amp;#39; | egrep -v -f /dev/fd/0 &amp;lt;(git branch -vv | grep origin) | awk &amp;#39;{print $1}&amp;#39; } show_stale } Other stuff Show current git branch in command line.</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/dotfiles/git/</guid>
-      <description> Cool combos  Unstage: alias.unstage reset HEAD -- Add changes to last commit: alias.amend commit --amend --no-edit Push a new branch creating the origin counterpart: alias.pushnew push -u origin HEAD Show last 10 commits: alias.hist log --pretty=format:&#39;%ad | %Cgreen %s%d %Creset [%an] %Cblue%h&#39; --graph --date=short -n 10 Show history as a tree: alias.tree log --oneline --all --graph --decorate  Just some shortcuts  alias.ch checkout alias.br branch alias.co commit  </description>
+      <description>Cool combos  Unstage: unstage = reset HEAD -- Add changes to last commit: amend = commit --amend --no-edit The &amp;ldquo;I forgot to delete a console.log&amp;rdquo; comand: ups = !git add . &amp;amp;&amp;amp; git amend &amp;amp;&amp;amp; git push --force Push a new branch creating the origin counterpart: pushnew = push -u origin HEAD Update remote references and pull master: updateAll = !git stash -u &amp;amp;&amp;amp; git checkout master &amp;amp;&amp;amp; git fetch --all --prune &amp;amp;&amp;amp; git pull &amp;amp;&amp;amp; git checkout - Show last 10 commits: hist = log --pretty=format:&#39;%ad | %Cgreen %s%d %Creset [%an] %Cblue%h&#39; --graph --date=short -n 10 Show history as a tree: tree = log --oneline --all --graph --decorate  Just some shortcuts  alias.</description>
     </item>
     
   </channel>

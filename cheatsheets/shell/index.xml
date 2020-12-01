@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on Hard drive</title>
@@ -6,18 +6,18 @@
     <description>Recent content in Shell on Hard drive</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 May 2019 00:18:40 +0200</lastBuildDate>
-    
-	<atom:link href="https://fcalabria.github.io/hard-drive/cheatsheets/shell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 May 2019 00:18:40 +0200</lastBuildDate><atom:link href="https://fcalabria.github.io/hard-drive/cheatsheets/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Commands</title>
       <link>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</link>
       <pubDate>Wed, 15 May 2019 00:18:40 +0200</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/shell/shell.commands/</guid>
-      <description>cat &amp;lt;filename&amp;gt; logs a file head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file  -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
+      <description>cat &amp;lt;filename&amp;gt; logs a file
+  head -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the first number lines of a file
+  tail -n &amp;lt;number&amp;gt; &amp;lt;filename&amp;gt; logs the last number lines of a file
+  grep &amp;lt;text&amp;gt; &amp;lt;filename&amp;gt;logs the lines containing text on the file
+ -v --invert-match logs the lines not containing text on the file -i --ignore-case matches independently of the case -E support for all regex instead of &amp;lt;text&amp;gt; -r recursively searchs in all files.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ If you don&amp;rsquo;t use quotes at all and your variable has whitespaces, it w
       <description>#!/bin/sh at the begining allows the script to be run writing just myscript.sh instead of sh myscript.sh on the command line.
 For this to work you may need to set the file as executable (chmod +x &amp;lt;filename&amp;gt;.sh)
 You can pass arguments to a script the same way you pass them to a function
-# Command line ./my-script.sh arg1 arg2 # Script echo &amp;quot;$1 - $2&amp;quot; # will print # arg1 - arg2  If you copy or move a script without the .</description>
+# Command line ./my-script.sh arg1 arg2 # Script echo &amp;#34;$1- $2&amp;#34; # will print # arg1 - arg2 If you copy or move a script without the .</description>
     </item>
     
     <item>

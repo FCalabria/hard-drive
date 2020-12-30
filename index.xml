@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Basic</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.basic/</guid>
+      <description>CREATE DATABASE mydatabasename; to create a DDBB USE mydatabasename; start working on a specific DDBB CREATE TABLE mytablename (colname1 char(5), colname2 varchar(30)); to create a table with specific columns ALTER TABLE mytablename ADD COLUMN colname varchar(30); to add a new column to an existing table ALTER TABLE mytablename RENAME colname TO newcolname; to rename a column from an existing table ALTER TABLE mytablename DROP colname; remove a column from an existing table INSERT INTO mytablename VALUES (&amp;quot;first column value&amp;quot;, &amp;quot;second column value&amp;quot;); to add data to a table in the predefined order INSERT INTO mytablename (colname1) VALUES (&amp;quot;first column value&amp;quot;); to add data to a table changing the order or omiting values SELECT * FROM mytablename; get all registries from a table SELECT colname3, colname4 FROM mytablename WHERE colname2 = colvalue; get specific columns for rows that match a criteria UPDATE mytablename SET colname = newvalue, colname2 = newvalue2 WHERE colname3 = colvalue; update specific data in a row SELECT DISTINCT colname1 FROM mytablename; get only unique values SELECT * FROM mytablename ORDER BY colname1, colname2; get sorted registries.</description>
+    </item>
+    
+    <item>
       <title>Workspace</title>
       <link>https://fcalabria.github.io/hard-drive/tools-and-resources/workspace-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,6 +58,24 @@ set -o pipefail The script will mark lines as failed if any piped command on it 
 Variables Variables are declared just like this varname=value but to be referenced need to have a $ before $varname
 Double quotes enable variable interpolation, while single quotes don&amp;rsquo;t. Use with care.
 If you don&amp;rsquo;t use quotes at all and your variable has whitespaces, it will be interpreted as different arguments.</description>
+    </item>
+    
+    <item>
+      <title>Data types</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.datatypes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.datatypes/</guid>
+      <description>   Code Long name Notes     char character String with fixed length in memory   varchar variable character String with flexible length in memory   numeric numeric Number with a specific quantity of cyphers (4,2) marks 4 total cyphers, 2 of them decimals   bool boolean 0 is false, non-zero is true   timestamp timestamp date In seconds. Can be initialized and updated automatically    </description>
+    </item>
+    
+    <item>
+      <title>Multiple tables</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.multipletables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.multipletables/</guid>
+      <description>SELECT * FROM table1, table2 WHERE table1.colname = table2.colname; search data from two tables (not ideal way) SELECT * FROM table1 INNER JOIN table2 ON table1.colname = table2.colname; search data joining two tables (inner is optional) SELECT * FROM table1 a JOIN table2 b ON a.colname = b.colname; alias for he table names (keep sentence short)  Join types:  INNER: shows only data present in both tables. Default mode LEFT: shows all registries from the first table even in they don&amp;rsquo;t match any item from the second table RIGHT: shows all registries from the second table even in they don&amp;rsquo;t match any item from the first table.</description>
     </item>
     
     <item>

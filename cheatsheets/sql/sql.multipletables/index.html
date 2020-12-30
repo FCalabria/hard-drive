@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
 
-    <title>Commands :: Hard drive</title>
+    <title>Multiple tables :: Hard drive</title>
 
     
     <link href="/hard-drive/css/nucleus.css?1609329765" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hard-drive/cheatsheets/shell/shell.commands/">
+  <body class="" data-url="/hard-drive/cheatsheets/sql/sql.multipletables/">
     <nav id="sidebar" class="">
 
 
@@ -156,7 +156,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/shell/" title="Shell" class="dd-item 
-        parent
+        
         
         
         ">
@@ -180,7 +180,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.commands/" title="Commands" class="dd-item active">
+      <li data-nav-id="/hard-drive/cheatsheets/shell/shell.commands/" title="Commands" class="dd-item ">
         <a href="/hard-drive/cheatsheets/shell/shell.commands/">
         Commands
         
@@ -266,7 +266,7 @@
   
     
     <li data-nav-id="/hard-drive/cheatsheets/sql/" title="SQL" class="dd-item 
-        
+        parent
         
         
         ">
@@ -328,7 +328,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.multipletables/" title="Multiple tables" class="dd-item ">
+      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.multipletables/" title="Multiple tables" class="dd-item active">
         <a href="/hard-drive/cheatsheets/sql/sql.multipletables/">
         Multiple tables
         
@@ -594,7 +594,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/shell/shell.commands.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/SQL/SQL.multipleTables.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -629,7 +629,7 @@
             
           
           
-            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/shell/'>Shell</a> > Commands
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/sql/'>SQL</a> > Multiple tables
           
          
           
@@ -646,7 +646,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#chaining-commands">Chaining commands</a></li>
+    <li>
+      <ul>
+        <li><a href="#join-types">Join types:</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -664,7 +668,7 @@
           
             <h1>
               
-              Commands
+              Multiple tables
             </h1>
           
 
@@ -673,64 +677,16 @@
 
 
 <ul>
-<li>
-<p><code>cat &lt;filename&gt;</code> logs a file</p>
-</li>
-<li>
-<p><code>head -n &lt;number&gt; &lt;filename&gt;</code> logs the first <em>number</em> lines of a file</p>
-</li>
-<li>
-<p><code>tail -n &lt;number&gt; &lt;filename&gt;</code> logs the last <em>number</em> lines of a file</p>
-</li>
-<li>
-<p><code>grep &lt;text&gt; &lt;filename&gt;</code>logs the lines containing <em>text</em> on the file</p>
-<ul>
-<li><code>-v --invert-match</code> logs the lines not containing <em>text</em> on the file</li>
-<li><code>-i --ignore-case</code> matches independently of the case</li>
-<li><code>-E</code> support for all regex instead of <code>&lt;text&gt;</code></li>
-<li><code>-r</code> recursively searchs in all files. Use it with a directory instead of <em>filename</em></li>
+<li><code>SELECT * FROM table1, table2 WHERE table1.colname = table2.colname;</code> search data from two tables (not ideal way)</li>
+<li><code>SELECT * FROM table1 INNER JOIN table2 ON table1.colname = table2.colname;</code> search data joining two tables (inner is optional)</li>
+<li><code>SELECT * FROM table1 a JOIN table2 b ON a.colname = b.colname;</code> alias for he table names (keep sentence short)</li>
 </ul>
-</li>
-<li>
-<p><code>find &lt;directory-to-look&gt; -name &lt;name&gt;</code> finds a file or directory with <em>name</em>. Use <code>-iname</code> for case insensitive search. Add <code>-type d</code> to look just for directories.</p>
-</li>
-<li>
-<p><code>tree</code> logs the directory structure like a tree, including nested</p>
-</li>
-<li>
-<p><code>sed 's/&lt;oldExpresion&gt;/&lt;newExpresion&gt;/' &lt;filename&gt;</code> logs the file substituting <em>oldExpresion</em> for <em>newExpresion</em></p>
+<h3 id="join-types">Join types:</h3>
 <ul>
-<li><code>-E</code> support for all regex instead of <code>&lt;oldExpresion&gt;</code></li>
-<li><code>-i 'subfix'</code> modify the original file and save the original one adding <code>subfix</code> to the name (for example, .old). If no subfix is provided, will not create the backup</li>
-</ul>
-</li>
-<li>
-<p><code>mv &lt;filename1&gt; &lt;filename2&gt;</code> renames <em>filename1</em> to <em>filename2</em></p>
-</li>
-<li>
-<p><code>&gt; &lt;filename&gt;</code> Will write the shell <em>stdout</em> to the file (replacing content)</p>
-</li>
-<li>
-<p><code>2&gt; &lt;filename&gt;</code> Will write the shell <em>stderror</em> to the file (replacing content)</p>
-</li>
-<li>
-<p><code>&amp;&gt; &lt;filename&gt;</code> Will write the shell <em>stdout</em> and <em>stderror</em> to the file (replacing content)</p>
-</li>
-<li>
-<p><code>&gt;&gt; &lt;filename&gt;</code> Will append the shell <em>stdout</em> to the file</p>
-</li>
-<li>
-<p><code>echo $?</code> Will print the exit code of the last command. 0 means no error.</p>
-</li>
-</ul>
-
-<div class="notices tip" ><p>To hide the output of a command, use <em>&amp;&gt; /dev/null</em></p>
-</div>
-
-<h2 id="chaining-commands">Chaining commands</h2>
-<ul>
-<li><code>&lt;command&gt; | &lt;command&gt;</code> Will run the first <em>command</em> and pass its output as the argument for the second <em>command</em></li>
-<li><code>&lt;command&gt; ; &lt;command&gt;</code> Will run both commands, independently of their output (i/ errors)</li>
+<li>INNER: shows only data present in both tables. Default mode</li>
+<li>LEFT: shows all registries from the first table even in they don&rsquo;t match any item from the second table</li>
+<li>RIGHT: shows all registries from the second table even in they don&rsquo;t match any item from the first table. Not supported on sqlite</li>
+<li>OUTER: shows only data with no matches in the tables. Not supported on sqlite</li>
 </ul>
 
 
@@ -821,91 +777,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -962,6 +833,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -969,6 +856,78 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1121,10 +1080,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hard-drive/cheatsheets/shell/" title="Shell"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hard-drive/cheatsheets/sql/sql.datatypes/" title="Data types"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hard-drive/cheatsheets/shell/shell.writing/" title="Writing scripts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hard-drive/cheatsheets/vscode/" title="Visual Studio Code" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

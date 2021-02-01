@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.79.0" />
+    <meta name="generator" content="Hugo 0.80.0" />
     <meta name="description" content="">
 <meta name="author" content="FCalabria">
 
@@ -12,18 +12,18 @@
     <title>Basic :: Hard drive</title>
 
     
-    <link href="/hard-drive/css/nucleus.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/fontawesome-all.min.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/hybrid.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/featherlight.min.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/perfect-scrollbar.min.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/auto-complete.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/atom-one-dark-reasonable.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/theme.css?1609329765" rel="stylesheet">
-    <link href="/hard-drive/css/hugo-theme.css?1609329765" rel="stylesheet">
+    <link href="/hard-drive/css/nucleus.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/fontawesome-all.min.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/hybrid.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/featherlight.min.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/perfect-scrollbar.min.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/auto-complete.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/atom-one-dark-reasonable.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/theme.css?1612169468" rel="stylesheet">
+    <link href="/hard-drive/css/hugo-theme.css?1612169468" rel="stylesheet">
     
 
-    <script src="/hard-drive/js/jquery-3.3.1.min.js?1609329765"></script>
+    <script src="/hard-drive/js/jquery-3.3.1.min.js?1612169468"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -52,14 +52,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/hard-drive/js/lunr.min.js?1609329765"></script>
-<script type="text/javascript" src="/hard-drive/js/auto-complete.js?1609329765"></script>
+<script type="text/javascript" src="/hard-drive/js/lunr.min.js?1612169468"></script>
+<script type="text/javascript" src="/hard-drive/js/auto-complete.js?1612169468"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/fcalabria.github.io\/hard-drive\/";
     
 </script>
-<script type="text/javascript" src="/hard-drive/js/search.js?1609329765"></script>
+<script type="text/javascript" src="/hard-drive/js/search.js?1612169468"></script>
 
     
   </div>
@@ -331,6 +331,44 @@
       <li data-nav-id="/hard-drive/cheatsheets/sql/sql.multipletables/" title="Multiple tables" class="dd-item ">
         <a href="/hard-drive/cheatsheets/sql/sql.multipletables/">
         Multiple tables
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.subqueries/" title="Subqueries" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/sql/sql.subqueries/">
+        Subqueries
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.cases/" title="Cases" class="dd-item ">
+        <a href="/hard-drive/cheatsheets/sql/sql.cases/">
+        Cases
         
         </a>
     </li>
@@ -678,18 +716,25 @@
 <li><code>INSERT INTO mytablename VALUES (&quot;first column value&quot;, &quot;second column value&quot;);</code> to add data to a table in the predefined order</li>
 <li><code>INSERT INTO mytablename (colname1) VALUES (&quot;first column value&quot;);</code> to add data to a table changing the order or omiting values</li>
 <li><code>SELECT * FROM mytablename;</code> get all registries from a table</li>
+<li><code>SELECT * FROM mytablename LIMIT 1;</code> get just the first register (combine with sorting)</li>
 <li><code>SELECT colname3, colname4 FROM mytablename WHERE colname2 = colvalue;</code> get specific columns for rows that match a criteria</li>
+<li><code>SELECT * FROM mytablename WHERE colname IS NULL;</code> empty values. Always use with <code>is</code>, never with <code>=</code></li>
 <li><code>UPDATE mytablename SET colname = newvalue, colname2 = newvalue2 WHERE colname3 = colvalue;</code> update specific data in a row</li>
 <li><code>SELECT DISTINCT colname1 FROM mytablename;</code> get only unique values</li>
 <li><code>SELECT * FROM mytablename ORDER BY colname1, colname2;</code> get sorted registries. Optionally <code>ORDER BY colname DESC;</code> to change the direction</li>
-<li><code>SELECT * FROM mytablename WHERE colname IS NULL;</code> empty values. Always use with <code>is</code>, never with <code>=</code></li>
 <li><code>DELETE FROM mytablename WHERE colname = colvalue</code> delete entries matching the criteria. <a href="https://www.youtube.com/watch?v=i_cVJgIz_Cs">Important</a></li>
 <li><code>DROP TABLE mytablename</code> delete a table</li>
 <li><code>DROP DATABASE mydatabasename</code> delete a DDBB</li>
 </ul>
-<p><code>LIKE</code> allows partial selectors combined with <code>%</code>. For example <code>SELECT * FROM mytablename WHERE colname LIKE &quot;val%&quot;;</code> will select everything starting with &ldquo;val&rdquo;
-Connectors for searchs: <code>AND</code>, <code>OR</code>, <code>BETWEEN</code>, <code>IN</code>, <code>NOT</code>
-Aggregated funcs: <code>MAX</code>, <code>MIN</code>, <code>AVG</code>, <code>SUM</code>, <code>COUNT</code>. Ej: <code>SELECT MAX(colname), COUNT(*) from mytablename</code></p>
+<p><code>LIKE</code> allows partial selectors combined with <code>%</code>. For example <code>SELECT * FROM mytablename WHERE colname LIKE &quot;val%&quot;;</code> will select everything starting with &ldquo;val&rdquo;</p>
+<p>Connectors for searchs: <code>AND</code>, <code>OR</code>, <code>BETWEEN</code>, <code>IN</code>, <code>NOT</code></p>
+<p>Aggregated funcs: <code>MAX</code>, <code>MIN</code>, <code>AVG</code>, <code>SUM</code>, <code>COUNT</code>. Ej: <code>SELECT MAX(colname), COUNT(*) from mytablename</code></p>
+<p>Functions to modify the output: <code>LOWER</code>, <code>UPPER</code>, <code>LENGTH</code>, <code>SUBSTR</code>, <code>REPLACE</code>, <code>TRIM</code>, <code>CONCAT</code>. Ej: <code>SELECT LENGTH(colname), LOWER(*) from mytablename</code></p>
+<p>Grouping:</p>
+<ul>
+<li><code>SELECT colname1, MAX(colname2) FROM mytablename GROUP BY colname1</code>. Once you use grouping, you can only show the value of the grouped column or aggregated functions (over any column).</li>
+<li><code>sqlite&gt; SELECT colname1, COUNT(colname2) from mytablename GROUP BY colname1 HAVING COUNT(*) &gt;= 2</code>. Add conditions over aggregated functions results</li>
+</ul>
 <p>Export a DDBB into a file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">.<span style="color:#66d9ef">open</span> mydatabasename
 .<span style="color:#66d9ef">output</span> myfile.<span style="color:#66d9ef">sql</span>
@@ -925,6 +970,38 @@ Aggregated funcs: <code>MAX</code>, <code>MIN</code>, <code>AVG</code>, <code>SU
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1097,19 +1174,19 @@ Aggregated funcs: <code>MAX</code>, <code>MIN</code>, <code>AVG</code>, <code>SU
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/hard-drive/js/clipboard.min.js?1609329765"></script>
-    <script src="/hard-drive/js/perfect-scrollbar.min.js?1609329765"></script>
-    <script src="/hard-drive/js/perfect-scrollbar.jquery.min.js?1609329765"></script>
-    <script src="/hard-drive/js/jquery.sticky.js?1609329765"></script>
-    <script src="/hard-drive/js/featherlight.min.js?1609329765"></script>
-    <script src="/hard-drive/js/highlight.pack.js?1609329765"></script>
+    <script src="/hard-drive/js/clipboard.min.js?1612169468"></script>
+    <script src="/hard-drive/js/perfect-scrollbar.min.js?1612169468"></script>
+    <script src="/hard-drive/js/perfect-scrollbar.jquery.min.js?1612169468"></script>
+    <script src="/hard-drive/js/jquery.sticky.js?1612169468"></script>
+    <script src="/hard-drive/js/featherlight.min.js?1612169468"></script>
+    <script src="/hard-drive/js/highlight.pack.js?1612169468"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/hard-drive/js/modernizr.custom-3.6.0.js?1609329765"></script>
-    <script src="/hard-drive/js/learn.js?1609329765"></script>
-    <script src="/hard-drive/js/hugo-learn.js?1609329765"></script>
+    <script src="/hard-drive/js/modernizr.custom-3.6.0.js?1612169468"></script>
+    <script src="/hard-drive/js/learn.js?1612169468"></script>
+    <script src="/hard-drive/js/hugo-learn.js?1612169468"></script>
 
-    <link href="/hard-drive/mermaid/mermaid.css?1609329765" rel="stylesheet" />
-    <script src="/hard-drive/mermaid/mermaid.js?1609329765"></script>
+    <link href="/hard-drive/mermaid/mermaid.css?1612169468" rel="stylesheet" />
+    <script src="/hard-drive/mermaid/mermaid.js?1612169468"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

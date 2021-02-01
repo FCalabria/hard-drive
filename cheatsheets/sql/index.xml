@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.basic/</guid>
-      <description>CREATE DATABASE mydatabasename; to create a DDBB USE mydatabasename; start working on a specific DDBB CREATE TABLE mytablename (colname1 char(5), colname2 varchar(30)); to create a table with specific columns ALTER TABLE mytablename ADD COLUMN colname varchar(30); to add a new column to an existing table ALTER TABLE mytablename RENAME colname TO newcolname; to rename a column from an existing table ALTER TABLE mytablename DROP colname; remove a column from an existing table INSERT INTO mytablename VALUES (&amp;quot;first column value&amp;quot;, &amp;quot;second column value&amp;quot;); to add data to a table in the predefined order INSERT INTO mytablename (colname1) VALUES (&amp;quot;first column value&amp;quot;); to add data to a table changing the order or omiting values SELECT * FROM mytablename; get all registries from a table SELECT colname3, colname4 FROM mytablename WHERE colname2 = colvalue; get specific columns for rows that match a criteria UPDATE mytablename SET colname = newvalue, colname2 = newvalue2 WHERE colname3 = colvalue; update specific data in a row SELECT DISTINCT colname1 FROM mytablename; get only unique values SELECT * FROM mytablename ORDER BY colname1, colname2; get sorted registries.</description>
+      <description>CREATE DATABASE mydatabasename; to create a DDBB USE mydatabasename; start working on a specific DDBB CREATE TABLE mytablename (colname1 char(5), colname2 varchar(30)); to create a table with specific columns ALTER TABLE mytablename ADD COLUMN colname varchar(30); to add a new column to an existing table ALTER TABLE mytablename RENAME colname TO newcolname; to rename a column from an existing table ALTER TABLE mytablename DROP colname; remove a column from an existing table INSERT INTO mytablename VALUES (&amp;quot;first column value&amp;quot;, &amp;quot;second column value&amp;quot;); to add data to a table in the predefined order INSERT INTO mytablename (colname1) VALUES (&amp;quot;first column value&amp;quot;); to add data to a table changing the order or omiting values SELECT * FROM mytablename; get all registries from a table SELECT * FROM mytablename LIMIT 1; get just the first register (combine with sorting) SELECT colname3, colname4 FROM mytablename WHERE colname2 = colvalue; get specific columns for rows that match a criteria SELECT * FROM mytablename WHERE colname IS NULL; empty values.</description>
     </item>
     
     <item>
@@ -31,6 +31,28 @@
       
       <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.multipletables/</guid>
       <description>SELECT * FROM table1, table2 WHERE table1.colname = table2.colname; search data from two tables (not ideal way) SELECT * FROM table1 INNER JOIN table2 ON table1.colname = table2.colname; search data joining two tables (inner is optional) SELECT * FROM table1 a JOIN table2 b ON a.colname = b.colname; alias for he table names (keep sentence short)  Join types:  INNER: shows only data present in both tables. Default mode LEFT: shows all registries from the first table even in they don&amp;rsquo;t match any item from the second table RIGHT: shows all registries from the second table even in they don&amp;rsquo;t match any item from the first table.</description>
+    </item>
+    
+    <item>
+      <title>Subqueries</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.subqueries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.subqueries/</guid>
+      <description>They are done with parenthesis, and allow to perform complex searchs. Example:
+SELECT name, year FROM friends WHERE year = (SELECT year FROM friends GROUP BY year ORDER BY count(*) DESC LIMIT 1); If the subquery returns more than one value, use IN instead of =. Example:
+SELECT name FROM friends WHERE citycode IN (SELECT code FROM cities WHERE name LIKE &amp;#34;C%&amp;#34;);  First do a query with the subquery (the part in parenthesis) to check that it is valid and returns what you want</description>
+    </item>
+    
+    <item>
+      <title>Cases</title>
+      <link>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.cases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fcalabria.github.io/hard-drive/cheatsheets/sql/sql.cases/</guid>
+      <description>A bit like a switch statement, but to create new columns on the results. Example:
+SELECT type, heart_rate, CASE WHEN heart_rate &amp;gt; 220-30 THEN &amp;#34;above max&amp;#34; WHEN heart_rate &amp;gt; ROUND(0.90 * (220-30)) THEN &amp;#34;above target&amp;#34; WHEN heart_rate &amp;gt; ROUND(0.50 * (220-30)) THEN &amp;#34;within target&amp;#34; ELSE &amp;#34;below target&amp;#34; END as &amp;#34;hr_zone&amp;#34; FROM exercise_logs; Will show something like:
+   type heart_rate hr_zone     biking 110 within target   biking 105 within target   dancing 120 within target   climbing 90 below target    </description>
     </item>
     
   </channel>

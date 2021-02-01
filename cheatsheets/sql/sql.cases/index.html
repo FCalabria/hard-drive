@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
 
-    <title>SQL :: Hard drive</title>
+    <title>Cases :: Hard drive</title>
 
     
     <link href="/hard-drive/css/nucleus.css?1612169468" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hard-drive/cheatsheets/sql/">
+  <body class="" data-url="/hard-drive/cheatsheets/sql/sql.cases/">
     <nav id="sidebar" class="">
 
 
@@ -267,7 +267,7 @@
     
     <li data-nav-id="/hard-drive/cheatsheets/sql/" title="SQL" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/hard-drive/cheatsheets/sql/">
@@ -366,7 +366,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.cases/" title="Cases" class="dd-item ">
+      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.cases/" title="Cases" class="dd-item active">
         <a href="/hard-drive/cheatsheets/sql/sql.cases/">
         Cases
         
@@ -632,7 +632,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/SQL/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/SQL/SQL.cases.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -646,6 +646,8 @@
                           <i class="fas fa-bars"></i>
                         </a>
                     </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
                   
                   <span class="links">
                  
@@ -661,7 +663,13 @@
             
           
           
-            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > SQL
+            
+            
+          
+          
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/sql/'>SQL</a> > Cases
+          
+         
           
          
           
@@ -672,6 +680,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -679,33 +694,66 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Cases
+            </h1>
           
 
         
 
 
 
-
-	<h1 id="sql">SQL</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">
-<span style="color:#75715e">--- Get a hello entry
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> greetings <span style="color:#66d9ef">WHERE</span> greet_text <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;Hello world!&#39;</span>;
-
-</code></pre></div>
-
-
+<p>A bit like a switch statement, but to create new columns on the results. Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">type</span>, heart_rate,
+    <span style="color:#66d9ef">CASE</span>
+        <span style="color:#66d9ef">WHEN</span> heart_rate <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">220</span><span style="color:#f92672">-</span><span style="color:#ae81ff">30</span> <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#34;above max&#34;</span>
+        <span style="color:#66d9ef">WHEN</span> heart_rate <span style="color:#f92672">&gt;</span> ROUND(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">90</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">220</span><span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>)) <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#34;above target&#34;</span>
+        <span style="color:#66d9ef">WHEN</span> heart_rate <span style="color:#f92672">&gt;</span> ROUND(<span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">50</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">220</span><span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>)) <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#34;within target&#34;</span>
+        <span style="color:#66d9ef">ELSE</span> <span style="color:#e6db74">&#34;below target&#34;</span>
+    <span style="color:#66d9ef">END</span> <span style="color:#66d9ef">as</span> <span style="color:#e6db74">&#34;hr_zone&#34;</span>
+<span style="color:#66d9ef">FROM</span> exercise_logs;
+</code></pre></div><p>Will show something like:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>heart_rate</th>
+<th>hr_zone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>biking</td>
+<td>110</td>
+<td>within target</td>
+</tr>
+<tr>
+<td>biking</td>
+<td>105</td>
+<td>within target</td>
+</tr>
+<tr>
+<td>dancing</td>
+<td>120</td>
+<td>within target</td>
+</tr>
+<tr>
+<td>climbing</td>
+<td>90</td>
+<td>below target</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -949,6 +997,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -967,6 +1016,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1119,10 +1171,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hard-drive/cheatsheets/shell/shell.resources/" title="Resources"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hard-drive/cheatsheets/sql/sql.subqueries/" title="Subqueries"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hard-drive/cheatsheets/sql/sql.basic/" title="Basic" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hard-drive/cheatsheets/vscode/" title="Visual Studio Code" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1152,3 +1204,4 @@
 
   </body>
 </html>
+

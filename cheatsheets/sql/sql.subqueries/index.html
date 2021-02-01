@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/hard-drive/images/favicon.png" type="image/png">
 
-    <title>SQL :: Hard drive</title>
+    <title>Subqueries :: Hard drive</title>
 
     
     <link href="/hard-drive/css/nucleus.css?1612169468" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hard-drive/cheatsheets/sql/">
+  <body class="" data-url="/hard-drive/cheatsheets/sql/sql.subqueries/">
     <nav id="sidebar" class="">
 
 
@@ -267,7 +267,7 @@
     
     <li data-nav-id="/hard-drive/cheatsheets/sql/" title="SQL" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/hard-drive/cheatsheets/sql/">
@@ -347,7 +347,7 @@
  
   
     
-      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.subqueries/" title="Subqueries" class="dd-item ">
+      <li data-nav-id="/hard-drive/cheatsheets/sql/sql.subqueries/" title="Subqueries" class="dd-item active">
         <a href="/hard-drive/cheatsheets/sql/sql.subqueries/">
         Subqueries
         
@@ -632,7 +632,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/SQL/_index.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/FCalabria/hard-drive/tree/master/src/content/cheatsheets/SQL/SQL.subqueries.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -646,6 +646,8 @@
                           <i class="fas fa-bars"></i>
                         </a>
                     </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
                   
                   <span class="links">
                  
@@ -661,7 +663,13 @@
             
           
           
-            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > SQL
+            
+            
+          
+          
+            <a href='/hard-drive/'>Hard drive</a> > <a href='/hard-drive/cheatsheets/'>Cheatsheets</a> > <a href='/hard-drive/cheatsheets/sql/'>SQL</a> > Subqueries
+          
+         
           
          
           
@@ -672,6 +680,13 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -679,24 +694,25 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Subqueries
+            </h1>
           
 
         
 
 
 
-
-	<h1 id="sql">SQL</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">
-<span style="color:#75715e">--- Get a hello entry
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> greetings <span style="color:#66d9ef">WHERE</span> greet_text <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;Hello world!&#39;</span>;
-
+<p>They are done with parenthesis, and allow to perform complex searchs. Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> name, <span style="color:#66d9ef">year</span> <span style="color:#66d9ef">FROM</span> friends <span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">year</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">year</span> <span style="color:#66d9ef">FROM</span> friends <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">year</span> <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">DESC</span> <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><p>If the subquery returns more than one value, use <code>IN</code> instead of <code>=</code>. Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> name <span style="color:#66d9ef">FROM</span> friends <span style="color:#66d9ef">WHERE</span> citycode <span style="color:#66d9ef">IN</span> (<span style="color:#66d9ef">SELECT</span> code <span style="color:#66d9ef">FROM</span> cities <span style="color:#66d9ef">WHERE</span> name <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#34;C%&#34;</span>);
 </code></pre></div>
-
+<div class="notices tip" ><p>First do a query with the subquery (the part in parenthesis) to check that it is valid and returns what you want</p>
+</div>
 
 
 
@@ -704,8 +720,7 @@
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -933,6 +948,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -948,6 +964,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1119,10 +1138,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/hard-drive/cheatsheets/shell/shell.resources/" title="Resources"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hard-drive/cheatsheets/sql/sql.multipletables/" title="Multiple tables"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hard-drive/cheatsheets/sql/sql.basic/" title="Basic" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hard-drive/cheatsheets/sql/sql.cases/" title="Cases" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1152,3 +1171,4 @@
 
   </body>
 </html>
+

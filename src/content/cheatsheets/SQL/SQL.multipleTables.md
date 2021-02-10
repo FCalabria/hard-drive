@@ -13,3 +13,12 @@ weight: 2
 - LEFT: shows all registries from the first table even in they don't match any item from the second table
 - RIGHT: shows all registries from the second table even in they don't match any item from the first table. Not supported on sqlite
 - OUTER: shows only data with no matches in the tables. Not supported on sqlite
+
+Tables can be joined with themselves to cross data, specifing aliases:
+
+```sql
+SELECT students.first_name, students.last_name, buddies.email
+    FROM students
+    JOIN students buddies
+    ON students.buddy_id = buddies.id;
+```

@@ -11,6 +11,7 @@ Title: "Git"
 - Update remote references and pull master: `updateAll = !git stash -u && git checkout master && git fetch --all --prune && git pull && git checkout -`
 - Show last 10 commits: `hist = log --pretty=format:'%ad | %Cgreen %s%d %Creset [%an] %Cblue%h' --graph --date=short -n 10`
 - Show history as a tree: `tree = log --oneline --all --graph --decorate`
+- Delete branches without a remote: `prune = git branch -vv | grep ': gone]'|  grep -v "\*" | awk '{ print $1; }' | xargs -r git branch -d` ([from here](https://medium.com/@kcmueller/delete-local-git-branches-that-were-deleted-on-remote-repository-b596b71b530c))
 
 ## Just some shortcuts
 
